@@ -44,8 +44,6 @@ class Game{
           console.log(`${this.try[i]} is in the array at the good place`)
           let helpGreen= document.querySelector(".try:last-child")
           helpGreen.innerHTML += `<img class="help" src="/images/green.png">`
-          // let helpBlack= document.querySelector("#helpBlack :last-child")
-          // helpBlack.innerHTML += ` 1 ` 
         }
         
         //vérifier si l'ingrédient est présent mais pas à la bonne place
@@ -53,8 +51,6 @@ class Game{
           console.log(`${this.try[i]} is in the answer but not at the good place`)
           let helpRed= document.querySelector(".try:last-child")
           helpRed.innerHTML += `<img class="help" src="/images/red.png">`
-          // let helpRed= document.querySelector("#helpRed :last-child")
-          // helpRed.innerHTML += ` 1 `
         }
         //l'ingrédient n'est pas présent
         else{
