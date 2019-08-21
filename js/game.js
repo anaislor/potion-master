@@ -1,17 +1,22 @@
+
 class Game{
   constructor(){
     this.answer = [];
+    this.answerImage=[]
     this.triesList = 0;
     this.try = [];
+    this.players=[];
   }
 
 
   randomAnswer(){
-    let proposition =["Flies", "Leeches", "Bicorn Horn", "Boomslang Skin"]
+    let proposition =["Flies", "Leeches", "Bicorn Horn", "Boomslang Skin"];
+    let imageProposition =["/images/flies.png", "/images/leeches.png","/images/bicorn-horn.png","/images/boomslang-skin.png"]
 
     for(let i = 0; i < 4; i++){
     let random = Math.floor(Math.random() * 4);
     this.answer.push(proposition[random])
+    this.answerImage.push(imageProposition[random])
     }
 
   }
@@ -32,8 +37,7 @@ class Game{
 
   checkIf(){
     if(this.arrayEqual() === true){
-      window.alert("You finish the game!")
-      location.reload()
+      showPopupWinner()
     }
     else{
       //vérifier si l'ingrédient est présent et à la bonne place
@@ -58,6 +62,22 @@ class Game{
 
         }
       }
+      if(Character.name === "gryffindor"){
+        gryffindor.score -= 10;
+        console.log(gryffindor.score)
+      }
+      else if(Character.name === "slytherin"){
+        slytherin.score -= 10;
+        console.log(slytherin.score);
+      }
+      else if(Character.name === "ravenclaw"){
+        ravenclaw.score -= 10;
+        console.log(ravenclaw.score);
+      }
+      else {
+        hufflepuff.score -= 10;
+        console.log(hufflepuff.score);
+      }
     }
     this.triesList +=1
     console.log(this.triesList)
@@ -80,9 +100,9 @@ class Game{
   }
 
   finishGame(){
-    if(this.triesList === 12){
-      window.alert(`Oops you lose ! This was the combination: ${this.answer}`)
-      location.reload()
+    if(this.triesList === 2){
+      showPopupLooser()
+
     }
 
 }
@@ -106,3 +126,81 @@ var flies = new Ingredient("Flies", "/images/flies.png");
 var leeches = new Ingredient("Leeches","/images/leeches.png");
 var bicornHorn = new Ingredient("Bicorn Horn", "/images/bicorn-horn.png");
 var boomslangSkin = new Ingredient("Boomslang Skin","/images/boomslang-skin.png")
+var popup;
+
+window.addEventListener("DOMContentLoaded", function() {
+    popup = document.getElementById("popup_1");
+});
+
+
+//afficher les alertes
+function showPopupLooser() {
+  popup.classList.add("is-active");
+  popup.innerHTML = `<div id="looserAlert">
+  <h3>Looser...</h3>
+  <img src="/images/looser.gif" alt="looser">
+  <div id="answer">
+  <p>The good recipe</p>
+  <img class="answer" src="${potionMaster.answerImage[0]}">
+  <img class="answer" src="${potionMaster.answerImage[1]}">
+  <img class="answer" src="${potionMaster.answerImage[2]}">
+  <img class="answer" src="${potionMaster.answerImage[3]}">
+  </div>
+  <button onclick="location.reload()">Play again !</button>
+  </div>`
+
+}
+
+function showPopupWinner() {
+  popup.classList.add("is-active");
+  popup.innerHTML = `<div id="winnerAlert">
+  <h3>100 points for Gryffondor !</h3>
+  <img src="/images/winner.gif" alt="winner">
+  <button onclick="location.reload()">Play again !</button>
+  </div>`
+
+}
+
+class Character{
+  constructor(name, image, html){
+    this.name= name;
+    this.image= image;
+    this.score= 120;
+    this.html= html
+  }
+}
+
+var gryffindor = new Character("gryffindor", "/images/gryffindor.png","/html/gryffindor.html");
+var slytherin = new Character("slytherin", "/images/slytherin.png","/html/slytherin.html");
+var hufflepuff= new Character("hufflepuff","/images/hufflepuff.png","/html/hufflepuff.html");
+var ravenclaw = new Character("ravenclaw","/images/ravenclaw.png","/html/ravenclaw.html")
+
+// house cup
+
+function showPopupLooserCup() {
+  popup.classList.add("is-active");
+  popup.innerHTML = `<div id="looserAlert">
+  <h3>Looser...</h3>
+  <img src="/images/looser.gif" alt="looser">
+  <div id="answer">
+  <p>The good recipe</p>
+  <img class="answer" src="${potionMaster.answerImage[0]}">
+  <img class="answer" src="${potionMaster.answerImage[1]}">
+  <img class="answer" src="${potionMaster.answerImage[2]}">
+  <img class="answer" src="${potionMaster.answerImage[3]}">
+  </div>
+  <button onclick="/html/score.html">Score !</button>
+  </div>`
+
+}
+
+function showPopupWinnerCup() {
+  popup.classList.add("is-active");
+  popup.innerHTML = `<div id="winnerAlert">
+  <h3>100 points for Gryffondor !</h3>
+  <img src="/images/winner.gif" alt="winner">
+  <button onclick="/html/score.html">Score</button>
+  </div>`
+
+}
+

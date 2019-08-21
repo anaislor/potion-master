@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="../housecup/housecup.js"></script>
+  <script type="module" src="../js/dom.js"></script>
+  <title>hufflepuff</title>
+</head>
+<body>
+    <style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICAQAA4ADgDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAwEAAPz7+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABEQAAAAAAAAAAAAAAAAAAEREQAAAAAAAAAAAAAAAAAREREQAAAAAAAAAAAAAAABERERAAAAAAAAAAAAAAAAEREREAAAAAAAAAAAAAAAAREREQAAAAAAAAAAAAAAABERERAAAAAAAAAAAAAAAAEREREAAAAAAAAAAAAAAAAREREQAAAAAAAAAAAAAAABERERAAAAAAAAAAAAAAAAEREREAAAAAAAAAAAAAAAAREREQAAAAAAAAAAAAAAABERERAAAAAAAAAAAAAAAAEiEREAAAAAAAAAAAAAAAASIiEQAAAAAAAAAAAAAAABIiIhAAAAAAAAAAAAAAAAABIiEAAAAAAAAAAAAAAAAAABIQAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////3////4////8H///+A////Af///gP///wH///4D///8B///+A////Af///gP///wH///4D///8B///+A////Af///4P////H////7//////////////////////////////////////////////////////////////////w=='), auto; }</style>
+  <div id="popup_2" class="popup"></div>
+  <nav id="potionMaster">
+      <div id="poudlard">
+        <img src="/images/poudlard.png" alt="poudlard">
+      </div>
+      <h1><a class="mainLogo" href="/html/intro.html">Potion master</a></h1>
+      <audio autoplay= "true" src="/sound/hufflepuff.mp3" type="audio/mpeg"></audio>
+  </nav>
+  <div id="container">
+  <div id="tries">
+    <h2>Tries</h2>
+    <ol id="triesList">
+      <li class="try"></li>
+    </ol>
+  </div>
+  <div id="containerGame">
+  <div id="potion">
+    <img id="blueCauldron" class="cauldron invisible" src="/images/chaudron-bleu.jpg" alt="plonk">
+    <img id="cauldron" class="cauldron" src="/images/chaudron-noir.gif"  alt="cauldron">
+    <audio src="/sound/plouf.mp3" type="audio/mpeg"></audio>
+  </div>
+  <div id="ingredients">
+  <h2>Ingredients</h2>
+  <div class="ingredient">
+    <p>Bicorn Horn</p>
+    <div >
+      <img  id="bicornHorn" src="/images/bicorn-horn.png" draggable="true" alt="Bicorn Horn" >
+    </div>
+  </div>
+  <div class="ingredient">
+    <p>Leeches</p>
+    <div>
+      <img id="leeches" src="/images/leeches.png" alt="Leeches" draggable="true">
+    </div>
+  </div>
+  <div class="ingredient">
+    <p>Boomslang Skin</p>
+    <div>
+      <img id="boomslangSkin" src="/images/boomslang-skin.png" alt="Boomslang Skin" draggable="true">
+    </div>
+  </div>
+  <div class="ingredient">
+    <p>Flies</p>
+    <div>
+      <img id="flies" src="/images/flies.png" alt="Flies" draggable="true" ondragstart="dragstartHandler(ev)">
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<footer>
+  <div></div>
+</footer>
+  
+</body>
+</html>
