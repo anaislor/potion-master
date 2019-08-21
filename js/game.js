@@ -147,6 +147,7 @@ function showPopupLooser() {
   <img class="answer" src="${potionMaster.answerImage[3]}">
   </div>
   <button onclick="location.reload()">Play again !</button>
+  <a class="btnAlert" href="/html/intro.html">Menu</a>
   </div>`
 
 }
@@ -157,6 +158,7 @@ function showPopupWinner() {
   <h3>100 points for Gryffondor !</h3>
   <img src="/images/winner.gif" alt="winner">
   <button onclick="location.reload()">Play again !</button>
+  <a class="btnAlert" href="/html/intro.html">Menu</a>
   </div>`
 
 }

@@ -13,6 +13,11 @@ body {
   position: relative;
 }
 
+footer div {
+  height: 150px;
+  background-color: #1b1b1b;
+}
+
 .mainLogo{
   text-decoration: none;
   color:#cdad2b;
@@ -189,16 +194,15 @@ p {
 }
 
 .characterSort {
-  margin-top: 160px;
+  position: absolute;
+  top: 18%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  left: 50%;
-  top: 70%;
-  z-index: 2000;
+  left: 25%;
+  z-index: 1;
   padding: 20px;
-  height: 90%;
   width: 50%;
   background-color: #fff;
   font-size: 3rem;
@@ -327,7 +331,6 @@ p {
   position: relative;
   width: 100%;
   align-self: center;
-ƒ
   display: flex;
   justify-content: center;
   align-items: center;
@@ -339,7 +342,7 @@ p {
 
 .cauldron {
   opacity: 1;
-  transition: opacity 0.5s linear;
+  transition: opacity 0.4s linear;
 }
 
 .cauldron.invisible {
@@ -348,12 +351,11 @@ p {
 
 #cauldron {
   position: relative;
-
 }
 
 #blueCauldron {
-
   position: absolute;
+}
 
 
 #ingredients {
@@ -391,10 +393,6 @@ p {
   width: 100%;
 }
 
-footer div {
-  height: 150px;
-  background-color: #1b1b1b;
-}
 
 /*pop up alerte*/
 
@@ -416,7 +414,7 @@ footer div {
 }
 
 .popup.is-active {
-  z-index: 1;
+  z-index: 2000;
   opacity: 1;
   /* background-color:#1b1b1b;  */
 }
@@ -459,7 +457,7 @@ footer div {
   width: 10%;
 }
 
-#winnerAlert, #winnerHouse {
+#winnerAlert, #winnerHouse, #equality{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -476,6 +474,10 @@ footer div {
   color: #cdad2b;
   border: 3px outset #d5b76f;
   border-radius: 20px;
+}
+
+#equality img{
+  width:90%;
 }
 
 /* coupe des 4 maisons score*/

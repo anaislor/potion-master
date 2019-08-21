@@ -90,15 +90,7 @@
    cauldron.ondragover = dragoverHandler;
    cauldron.ondrop = dropHandler;
    
-   
-   document.getElementById("#playHouseCup").onclick = function(e){
-      console.log("storage clear")
-      // let btnHouseCup= e.target;
-      localStorage.setItem("gryffindor",0);
-      localStorage.setItem("slytherin",0);
-      localStorage.setItem("ravenclaw",0);
-      localStorage.setItem("hufflepuff",0);
-   }
+
     //     ingredient.onclick = function(e){
     //       console.log("ingredient click")
 

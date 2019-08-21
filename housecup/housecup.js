@@ -110,16 +110,16 @@ class Game{
       gryffindor.totalscore = this.score;
       localStorage.setItem("gryffindor", this.score)
     }
-    if(this.player.indexOf("slytherin")===0){
+    else if(this.player.indexOf("slytherin")===0){
       slytherin.totalscore = this.score;
       localStorage.setItem("slytherin", this.score)
 
     }
-    if(this.player.indexOf("ravenclaw")===0){
+    else if(this.player.indexOf("ravenclaw")===0){
       ravenclaw.totalscore = this.score;
       localStorage.setItem("ravenclaw", this.score)
     }
-    if(this.player.indexOf("hufflepuff")===0){
+    else if(this.player.indexOf("hufflepuff")===0){
       hufflepuff.totalscore = this.score;
       localStorage.setItem("hufflepuff", this.score)
       }
@@ -141,7 +141,7 @@ console.log(potionMaster.player)
 let popup;
 
 window.addEventListener("DOMContentLoaded", function() {
-  popup = document.getElementById("popup_2");
+  popup = document.querySelector(".popup");
   let title = document.title
   potionMaster.player.push(title);
 });
