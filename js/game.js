@@ -80,7 +80,7 @@ class Game{
       }
     }
     this.triesList +=1
-    if(this.triesList === 2){
+    if(this.triesList === 12){
       this.finishGame()
     }
     this.emptyArray()
