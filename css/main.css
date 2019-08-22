@@ -125,6 +125,7 @@ p {
 }
 
 #explanation {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -139,6 +140,17 @@ p {
 #rules {
   width: 50%;
   padding: 15px;
+}
+
+#help {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 50%;
+  text-align: center;
+  font-family: "Harry Potter";
+  color: #cdad2b;
+  font-size: 5rem;
 }
 
 .ligthning {

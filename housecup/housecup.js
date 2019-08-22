@@ -61,6 +61,8 @@ class Game {
   }
 
   checkIf() {
+    let answerleft = [];
+    let tryleft = [];
     for (let i = 0; i < this.try.length; i++) {
       if (this.answer.includes(this.try[i])) {
         //vérifier si l'ingrédient est présent et à la bonne place
@@ -71,16 +73,29 @@ class Game {
         }
         //vérifier si l'ingrédient est présent mais pas à la bonne place
         else {
-          console.log(
-            `${this.try[i]} is in the answer but not at the good place`
-          );
-          let helpRed = document.querySelector(".try:last-child");
-          helpRed.innerHTML += `<img class="help" src="/images/red.png">`;
+          console.log(`${this.try[i]} is not found yet`);
+          answerleft.push(this.answer[i]);
+          tryleft.push(this.try[i]);
         }
       }
       //ingrédient n'existe pas
       else {
         console.log(`${this.try[i]} not found in the answer`);
+      }
+    }
+    //vérifier si l'ingrédient est présent mais pas à la bonne place
+    for (let j = 0; j < tryleft.length; j++) {
+      let filtertry = tryleft.filter(word => word === tryleft[j]);
+      let filteranswer = answerleft.filter(word => word === tryleft[j]);
+      if (
+        filtertry.length <= filteranswer.length &&
+        j - 1 <= filteranswer.length
+      ) {
+        console.log(`${tryleft[j]} is in the answer but not at the good place`);
+        let helpRed = document.querySelector(".try:last-child");
+        helpRed.innerHTML += `<img class="help" src="/images/red.png">`;
+      } else {
+        console.log(`${tryleft[j]} not found in the answer`);
       }
     }
     if (this.arrayEqual() === true) {
