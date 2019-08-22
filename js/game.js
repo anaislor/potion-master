@@ -70,8 +70,7 @@ class Game {
       }
     }
     if (this.arrayEqual() === true) {
-      this.scoreAdded();
-      showPopupWinnerCup();
+      showPopupWinner();
     }
     this.triesList += 1;
 

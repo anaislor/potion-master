@@ -25,14 +25,14 @@ h1 {
   font-size: 5rem;
   font-family: "Harry Potter";
   color: #cdad2b;
-  text-shadow:#181312 8px 0 10px;
+  text-shadow: #181312 8px 0 10px;
 }
 
 h2 {
   font-size: 3rem;
   align-self: center;
   font-family: "Harry Potter";
-  color: #BA9809;
+  color: #ba9809;
 }
 
 h3 {
@@ -42,7 +42,7 @@ h3 {
   font-family: "Harry Potter";
 }
 
-.btn{
+.btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,14 +54,14 @@ h3 {
   font-family: "Harry Potter";
   font-size: 3rem;
   background-color: #cdad2b;
-  border: 10px outset #BA9809;
+  border: 10px outset #ba9809;
   text-decoration: none;
-  color: black; 
+  color: black;
 }
 
-.mainLogo{
+.mainLogo {
   text-decoration: none;
-  color:#cdad2b;
+  color: #cdad2b;
 }
 #potionMaster {
   padding: 10px;
@@ -72,6 +72,47 @@ h3 {
   width: 100%;
   background-image: url("/images/header-ravenclaw.jpg");
   height: 100px;
+}
+
+#empty {
+  width: 40%;
+}
+
+#tip {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  width: 35%;
+  height: 80px;
+  border-radius: 20px;
+  border: 8px outset #ba9809;
+}
+
+.ligthning {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.ligthning :first-child {
+  width: 40%;
+}
+
+.ligthning img {
+  margin: 0;
+  width: 100%;
+}
+
+.ligthning p {
+  text-align: left;
+  margin: 0;
+  font-family: sans-serif;
 }
 
 footer div {
@@ -94,7 +135,7 @@ footer div {
   flex-direction: row-reverse;
   justify-content: space-around;
   align-content: center;
-  background-color: #3267A2;
+  background-color: #3267a2;
   height: 800px;
 }
 
@@ -111,7 +152,7 @@ footer div {
   padding-top: 20px;
   margin-top: 0;
   align-self: flex-end;
-  background-color: #3267A2;
+  background-color: #3267a2;
   /* border-radius: 20px; */
   width: 35%;
   display: flex;
@@ -184,11 +225,10 @@ footer div {
   position: absolute;
 }
 
-
 #ingredients {
   align-self: center;
   width: 35%;
-  background-color: #0E3259;
+  background-color: #0e3259;
   height: 800px;
   display: flex;
   flex-direction: column;
@@ -196,7 +236,7 @@ footer div {
   justify-content: flex-start;
   padding: 20px;
   margin: 0;
-  z-index: 2
+  z-index: 2;
 }
 
 .ingredient {
@@ -213,7 +253,7 @@ footer div {
   flex-direction: column;
   justify-content: center;
   font-family: "Harry Potter";
-  color: #BA9809;
+  color: #ba9809;
 }
 
 .ingredient div {
@@ -224,7 +264,6 @@ footer div {
   width: 80%;
   left: 0;
 }
-
 
 /*pop up alerte*/
 
@@ -269,25 +308,25 @@ footer div {
   border-radius: 10px;
 }
 
-#looserAlert h3{
+#looserAlert h3 {
   margin: 20px;
 }
 
-#looserAlert p{
+#looserAlert p {
   color: #cdad2b;
   font-size: 1.8rem;
   margin-right: 10px;
   font-family: sans-serif;
 }
 
-#looserAlert img{
-  margin-top:10px;
+#looserAlert img {
+  margin-top: 10px;
   width: 60%;
   margin-top: 10px;
 }
 
-#winnerAlert img{
-  margin-top:10px;
+#winnerAlert img {
+  margin-top: 10px;
   width: 80%;
   margin-top: 10px;
 }
@@ -305,17 +344,17 @@ footer div {
   width: 10%;
 }
 
-.popupbtn{
+.popupbtn {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.popupbtn .btn{
+.popupbtn .btn {
   width: 40%;
 }
 
-#winnerAlert{
+#winnerAlert {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -326,7 +365,7 @@ footer div {
   padding: 20px;
   height: 80%;
   width: 50%;
-  background-color: #3267A2;
+  background-color: #3267a2;
   font-size: 3rem;
   line-height: 16px;
   color: #cdad2b;
@@ -336,7 +375,7 @@ footer div {
 
 /* House cup*/
 
-#winnerHouse{
+#winnerHouse {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -347,7 +386,7 @@ footer div {
   padding: 20px;
   height: 80%;
   width: 50%;
-  background-color: #3267A2;
+  background-color: #3267a2;
   font-size: 3rem;
   line-height: 16px;
   color: #cdad2b;

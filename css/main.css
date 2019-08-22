@@ -19,17 +19,17 @@ white: #E7E3DD
 
 body {
   position: relative;
-  background-color: #24282C;
+  background-color: #24282c;
 }
 
 footer div {
   height: 150px;
-  background-color: #24282C;
+  background-color: #24282c;
 }
 
-.mainLogo{
+.mainLogo {
   text-decoration: none;
-  color:#cdad2b;
+  color: #cdad2b;
 }
 
 #potionMaster {
@@ -48,7 +48,7 @@ h1 {
   /* width: 80%; */
   font-family: "Harry Potter";
   color: #cdad2b;
-  text-shadow:#24282C 8px 0 10px;
+  text-shadow: #24282c 8px 0 10px;
 }
 
 h2 {
@@ -64,7 +64,7 @@ h3 {
   font-family: "Harry Potter";
 }
 
-.btn{
+.btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,9 +76,9 @@ h3 {
   font-family: "Harry Potter";
   font-size: 3rem;
   background-color: #cdad2b;
-  border: 10px outset #BA9809;
+  border: 10px outset #ba9809;
   text-decoration: none;
-  color: black; 
+  color: black;
 }
 
 /*Introduction*/
@@ -121,7 +121,7 @@ p {
   width: 50%;
   margin-bottom: 50px;
   font-size: 8rem;
-  text-shadow:#24282C 8px 0 10px;
+  text-shadow: #24282c 8px 0 10px;
 }
 
 #explanation {
@@ -138,7 +138,7 @@ p {
 
 #rules {
   width: 50%;
-  padding: 25px;
+  padding: 15px;
 }
 
 .ligthning {
@@ -156,7 +156,7 @@ p {
   margin-bottom: 10px;
 }
 
-#introbtn{
+#introbtn {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -171,7 +171,7 @@ p {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #24282C;
+  background-color: #24282c;
   width: 100%;
 }
 
@@ -191,14 +191,13 @@ p {
   background-color: #fff;
   width: 80%;
   height: 50%;
-
 }
 
 .characterRandom img {
-  width:100%;
+  width: 100%;
 }
 
-#random .btn{
+#random .btn {
   width: 40%;
 }
 
@@ -226,9 +225,9 @@ p {
   margin: 20px;
 }
 
-.characterSort img{
+.characterSort img {
   width: 70%;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 .gryffindor {
@@ -241,7 +240,7 @@ p {
 }
 
 .ravenclaw {
-  background-color: #385DA4;
+  background-color: #385da4;
 }
 
 .slytherin {
@@ -272,7 +271,7 @@ p {
   flex-direction: row-reverse;
   justify-content: space-around;
   align-content: center;
-  background-color: #711B14;
+  background-color: #711b14;
   /* border: 15px ridge #711B14; */
   height: 800px;
   /* width: ; */
@@ -292,7 +291,7 @@ p {
   padding-top: 20px;
   margin-top: 0;
   align-self: flex-end;
-  background-color: #711B14;
+  background-color: #711b14;
   /* border-radius: 20px; */
   width: 35%;
   display: flex;
@@ -365,11 +364,10 @@ p {
   position: absolute;
 }
 
-
 #ingredients {
   align-self: center;
   width: 30%;
-  background-color: #C1A47A;
+  background-color: #c1a47a;
   /* border-radius: 25px; */
   height: 800px;
   display: flex;
@@ -380,7 +378,7 @@ p {
   margin: 0;
   /* border: 15px ridge #711B14; */
   /* box-shadow: 7px 25px 0px 15px #711B14; */
-  z-index: 2
+  z-index: 2;
 }
 
 .ingredient {
@@ -405,7 +403,6 @@ p {
 .ingredient img {
   width: 90%;
 }
-
 
 /*pop up alerte*/
 
@@ -450,23 +447,23 @@ p {
   border: 20px ridge #cdad2b;
   border-radius: 10px;
 }
-#looserAlert h3{
+#looserAlert h3 {
   margin: 20px;
 }
 
-#looserAlert p{
+#looserAlert p {
   color: #cdad2b;
 }
 
 #looserAlert img,
-#winnerHouse img{
-  margin-top:10px;
+#winnerHouse img {
+  margin-top: 10px;
   width: 60%;
   margin-top: 10px;
 }
 
-#winnerAlert img{
-  margin-top:10px;
+#winnerAlert img {
+  margin-top: 10px;
   width: 80%;
   margin-top: 10px;
 }
@@ -484,20 +481,19 @@ p {
   width: 10%;
 }
 
-.popupbtn{
+.popupbtn {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.popupbtn .btn{
+.popupbtn .btn {
   width: 40%;
 }
 
-
 /* coupe des 4 maisons score*/
 
-#houseCupBackground{
+#houseCupBackground {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -505,41 +501,45 @@ p {
   align-items: center;
 }
 
-#houseCupBackground h1{
-text-align: center;
-margin-bottom: 20px;
+#houseCupBackground h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#score{
+#score {
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 1px solid black;
   width: 80%;
   padding: 20 0px;
-  background-color: #E7E3DD;
-  border: 20px ridge #cdad2b
+  background-color: #e7e3dd;
+  border: 20px ridge #cdad2b;
 }
 
-#score .btn{
-  width:20%;
+#score .btn {
+  width: 20%;
   margin: 15px;
 }
 
-#score h2, #score p{
+#score h2,
+#score p {
   display: flex;
   align-items: center;
   width: 40%;
   padding: 0 15px;
   color: #cdad2b;
-  text-shadow:#24282C 8px 0 10px;
+  text-shadow: #24282c 8px 0 10px;
 }
 
-#score h2{
+#score h2 {
   font-size: 10 rem;
 }
 
-#gryffindor, #slytherin, #hufflepuff, #ravenclaw{
+#gryffindor,
+#slytherin,
+#hufflepuff,
+#ravenclaw {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -547,20 +547,20 @@ margin-bottom: 20px;
   margin: 15px 0;
 }
 
-#gryffindor{
-  background-color: #711B14;
+#gryffindor {
+  background-color: #711b14;
 }
 
-#slytherin{
-  background-color: #1F4C41;
+#slytherin {
+  background-color: #1f4c41;
 }
 
-#ravenclaw{
-  background-color: #3267A2;
+#ravenclaw {
+  background-color: #3267a2;
 }
 
-#hufflepuff{
-  background-color: #CA7B29;
+#hufflepuff {
+  background-color: #ca7b29;
 }
 
 /* .btnAlert{
@@ -579,7 +579,7 @@ margin-bottom: 20px;
   color: black;
 } */
 
-.winnerHouse{
+.winnerHouse {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -597,15 +597,15 @@ margin-bottom: 20px;
   border-radius: 20px;
 }
 
-.winnerHouse .btn{
-  width:40%;
+.winnerHouse .btn {
+  width: 40%;
 }
 
-.winnerHouse h3{
+.winnerHouse h3 {
   text-transform: capitalize;
 }
 
-#equality{
+#equality {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -616,7 +616,7 @@ margin-bottom: 20px;
   padding: 20px;
   height: 80%;
   width: 50%;
-  background-color: #5F6C75;
+  background-color: #5f6c75;
   font-size: 3rem;
   line-height: 16px;
   color: #cdad2b;
@@ -624,6 +624,6 @@ margin-bottom: 20px;
   border-radius: 20px;
 }
 
-#equality img{
-  width:90%;
+#equality img {
+  width: 90%;
 }
