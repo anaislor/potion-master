@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/css/ravenclaw.css">
   <script src="../js/game.js"></script>
   <script type="module" src="../js/dom.js"></script>
   <title>ravenclaw</title>
@@ -28,8 +28,8 @@
   </div>
   <div id="containerGame">
   <div id="potion">
-    <img id="blueCauldron" class="cauldron invisible" src="/images/chaudron-bleu.jpg" alt="plonk">
-    <img id="cauldron" class="cauldron" src="/images/chaudron-noir.gif"  alt="cauldron">
+    <img id="blueCauldron" class="cauldron invisible" src="/images/potionblue-ravenclaw.jpg" alt="plonk">
+    <img id="cauldron" class="cauldron" src="/images/potion-ravenclaw.gif"  alt="cauldron">
     <audio src="/sound/plouf.mp3" type="audio/mpeg"></audio>
   </div>
   <div id="ingredients">
@@ -57,6 +57,18 @@
     <div>
       <img id="flies" src="/images/flies.png" alt="Flies" draggable="true" ondragstart="dragstartHandler(ev)">
     </div>
+  </div>
+  <div class="ingredient">
+      <p>Love Philter</p>
+      <div>
+        <img id="lovePhilter" src="/images/elixir.png" alt="Love Philter" draggable="true">
+      </div>
+  </div>
+  <div class="ingredient">
+      <p>Knotgrass</p>
+      <div>
+        <img id="knotgrass" src="/images/plant.png" alt="Knotgrass" draggable="true">
+      </div>
   </div>
   </div>
   </div>

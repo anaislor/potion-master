@@ -1,0 +1,335 @@
+/* Color palette:
+bright green: #377766
+green: #1F4C41
+dark green: #0F1C19
+dark: #050C0A
+light: #A8977E
+*/
+
+@font-face {
+  font-family: "Harry Potter";
+  src: url("/font/HARRYP__.TTF");
+}
+
+* {
+  box-sizing: border-box;
+  font: 10px;
+  margin: 0;
+}
+
+body {
+  position: relative;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "Harry Potter";
+  color: #cdad2b;
+  text-shadow:#181312 8px 0 10px;
+}
+
+h2 {
+  font-size: 3rem;
+  align-self: center;
+  font-family: "Harry Potter";
+  color: #BA9809;
+}
+
+h3 {
+  font-size: 3.5rem;
+  align-self: center;
+  margin-bottom: 10px;
+  font-family: "Harry Potter";
+}
+
+.btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 20%;
+  font-family: "Harry Potter";
+  font-size: 3rem;
+  background-color: #cdad2b;
+  border: 10px outset #BA9809;
+  text-decoration: none;
+  color: black; 
+}
+
+.mainLogo{
+  text-decoration: none;
+  color:#cdad2b;
+}
+#potionMaster {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-image: url("/images/header-slytherin.jpg");
+  height: 100px;
+}
+
+footer div {
+  height: 150px;
+  background-color: #050C0A;
+}
+
+/*main game*/
+
+#poudlard {
+  width: 6%;
+}
+
+#poudlard img {
+  width: 80%;
+}
+
+#container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #1F4C41;
+  height: 800px;
+}
+
+#containerGame {
+  background-color: #050C0A;
+  height: 800px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#tries {
+  padding-top: 20px;
+  margin-top: 0;
+  align-self: flex-end;
+  background-color: #1F4C41;
+  /* border-radius: 20px; */
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
+
+#tries h2 {
+  width: 100%;
+  text-align: center;
+  color: #cdad2b;
+}
+
+#triesList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: #cdad2b;
+}
+
+.proposition {
+  width: 15%;
+}
+
+.proposition :last-child {
+  margin-right: 10px;
+}
+
+.help {
+  width: 10%;
+}
+
+.try {
+  font-size: 1.5rem;
+}
+
+#potion {
+  position: relative;
+  width: 100%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#potion img {
+  width: 100%;
+}
+
+.cauldron {
+  opacity: 1;
+  transition: opacity 0.4s linear;
+}
+
+.cauldron.invisible {
+  opacity: 0;
+}
+
+#cauldron {
+  position: relative;
+}
+
+#blueCauldron {
+  position: absolute;
+}
+
+
+#ingredients {
+  align-self: center;
+  width: 35%;
+  background-color: #0F1C19;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  margin: 0;
+  z-index: 2
+}
+
+.ingredient {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+.ingredient p {
+  width: 50%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Harry Potter";
+  color: #BA9809;
+}
+
+.ingredient div {
+  width: 45%;
+}
+
+.ingredient img {
+  width: 80%;
+  left: 0;
+}
+
+
+/*pop up alerte*/
+
+.popup {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s linear;
+}
+
+.popup.is-active {
+  z-index: 2000;
+  opacity: 1;
+}
+
+#looserAlert {
+  position: absolute;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 25%;
+  z-index: 1;
+  padding: 20px;
+  width: 50%;
+  background-color: #000;
+  font-size: 3rem;
+  line-height: 16px;
+  color: #cdad2b;
+  border: 20px ridge #cdad2b;
+  border-radius: 10px;
+}
+
+#looserAlert h3{
+  margin: 20px;
+}
+
+#looserAlert p{
+  color: #cdad2b;
+  font-size: 1.8rem;
+  margin-right: 10px;
+  font-family: sans-serif;
+}
+
+#looserAlert img{
+  margin-top:10px;
+  width: 60%;
+  margin-top: 10px;
+}
+
+#winnerAlert img{
+  margin-top:10px;
+  width: 80%;
+  margin-top: 10px;
+}
+
+#answer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 70px 0;
+  align-items: center;
+  font-family: "Harry Potter";
+}
+
+#looserAlert .answer {
+  width: 10%;
+}
+
+.popupbtn{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.popupbtn .btn{
+  width: 40%;
+}
+
+#winnerAlert{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+  top: 70%;
+  z-index: 2000;
+  padding: 20px;
+  height: 80%;
+  width: 50%;
+  background-color: #1F4C41;
+  font-size: 3rem;
+  line-height: 16px;
+  color: #cdad2b;
+  border: 20px ridge #cdad2b;
+  border-radius: 20px;
+}

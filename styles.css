@@ -1,3 +1,11 @@
+/*main theme color palette
+gold: #cdad2b
+light grey: #5F6C75
+grey: #24282C
+black: #000
+white: #E7E3DD
+*/
+
 @font-face {
   font-family: "Harry Potter";
   src: url("/font/HARRYP__.TTF");
@@ -15,7 +23,7 @@ body {
 
 footer div {
   height: 150px;
-  background-color: #1b1b1b;
+  background-color: #24282C;
 }
 
 .mainLogo{
@@ -30,14 +38,16 @@ footer div {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  background-color: #31672e;
+  background-image: url("/images//header-theme.jpg");
+  height: 100px;
 }
 
 h1 {
   font-size: 5rem;
-  width: 80%;
+  /* width: 80%; */
   font-family: "Harry Potter";
   color: #cdad2b;
+  text-shadow:#24282C 8px 0 10px;
 }
 
 h2 {
@@ -54,7 +64,24 @@ h3 {
   font-family: "Harry Potter";
 }
 
-button {
+.btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 20%;
+  font-family: "Harry Potter";
+  font-size: 3rem;
+  background-color: #cdad2b;
+  border: 10px outset #BA9809;
+  text-decoration: none;
+  color: black; 
+}
+
+/* button {
   border-radius: 10px;
   width: 30%;
   height: 30px;
@@ -64,13 +91,16 @@ button {
   padding: 5px;
   background-color: #cdad2b;
   border: none;
-}
+} */
 
 /*Introduction*/
 p {
   font-family: sans-serif;
   color: black;
   font-size: 1.8rem;
+  width: 100%;
+  line-height: 1.3;
+  /* font-weight: lighter; */
 }
 
 #intro {
@@ -101,9 +131,10 @@ p {
 
 #intro h1 {
   text-align: center;
+  width: 50%;
   margin-bottom: 50px;
-  font-size: 10rem;
-  text-shadow: #1b1b1b 1px 10px 200px;
+  font-size: 8rem;
+  text-shadow:#24282C 8px 0 10px;
 }
 
 #explanation {
@@ -112,19 +143,22 @@ p {
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
+  height: 60%;
+  border: 20px ridge #cdad2b
+  /* box-shadow: 7px 7px 0px 2px #5F6C75; */
 }
 
 #rules {
-  width: 50%;
+  width: 100%;
   padding: 20px;
   padding-right: 50px;
-  text-align: justify;
+  text-align: center;
 }
 
 .ligthning {
-  width: 25%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -134,14 +168,15 @@ p {
 }
 
 .ligthning img {
-  width: 25%;
+  width: 15%;
 }
 
-#tips {
-  width: 100%;
+/* #tips {
+  width: 50%;
   text-align: center;
   margin-top: 20px;
-}
+
+} */
 
 #introbtn{
   display: flex;
@@ -149,7 +184,7 @@ p {
   justify-content: center;
   width: 100%;
 }
-
+/* 
 #introbtn a {
   display: flex;
   flex-direction: column;
@@ -165,7 +200,7 @@ p {
   border: none;
   text-decoration: none;
   color: black;
-}
+} */
 
 /*character random*/
 
@@ -174,7 +209,8 @@ p {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #1b1b1b;
+  background-color: #24282C;
+  width: 100%;
 }
 
 #random {
@@ -183,19 +219,30 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 40%;
   text-align: center;
 }
 
 .characterRandom {
   margin-bottom: 20px;
-  border: 6px solid #cdad2b;
+  border: 20px ridge #cdad2b;
   background-color: #fff;
+  width: 80%;
+  height: 50%;
+
+}
+
+.characterRandom img {
+  width:100%;
+}
+
+#random .btn{
+  width: 40%;
 }
 
 .characterSort {
   position: absolute;
-  top: 18%;
+  top: 110px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -208,12 +255,18 @@ p {
   font-size: 3rem;
   line-height: 16px;
   color: #cdad2b;
-  border: 3px solid #d5b76f;
-  border-radius: 20px;
+  border: 20px ridge #cdad2b;
+  border-radius: 10px;
 }
 
 .characterSort h3 {
   text-transform: capitalize;
+  margin: 20px;
+}
+
+.characterSort img{
+  width: 70%;
+  margin-top:10px;
 }
 
 .gryffindor {
@@ -221,15 +274,16 @@ p {
 }
 
 .hufflepuff {
-  background-color: #7a7979;
+  background-color: #f3dc62;
+  color: black;
 }
 
 .ravenclaw {
-  background-color: #345593;
+  background-color: #385DA4;
 }
 
 .slytherin {
-  background-color: #31672e;
+  background-color: #377766;
 }
 
 /* #characterSort h1{
@@ -237,26 +291,14 @@ p {
 } */
 
 #btnCharacterSort {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  border-radius: 10px;
-  width: 30%;
-  height: 80px;
-  font-family: "Harry Potter";
-  font-size: 3rem;
-  background-color: #cdad2b;
-  border: none;
-  text-decoration: none;
-  color: black;
+  width: 40%;
+  padding: 20px;
 }
 
 /*main game*/
 
 #poudlard {
-  width: 8%;
+  width: 6%;
 }
 
 #poudlard img {
@@ -268,25 +310,27 @@ p {
   flex-direction: row-reverse;
   justify-content: space-around;
   align-content: center;
-  background-color: #d5b76f;
+  background-color: #711B14;
+  /* border: 15px ridge #711B14; */
+  height: 800px;
+  /* width: ; */
 }
 
 #containerGame {
   /* background-image: url("/images/bois.jpg"); */
-  background-color: #1b1b1b;
+  background-color: #181312;
   height: 800px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
   align-content: center;
-  padding: 20px;
 }
 
 #tries {
   padding-top: 20px;
   margin-top: 0;
   align-self: flex-end;
-  background-color: #d5b76f;
+  background-color: #711B14;
   /* border-radius: 20px; */
   width: 35%;
   display: flex;
@@ -299,6 +343,7 @@ p {
 #tries h2 {
   width: 100%;
   text-align: center;
+  color: #cdad2b;
 }
 
 #triesList {
@@ -307,8 +352,9 @@ p {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  font-family: Serif;
+  font-family: sans-serif;
   font-size: 2rem;
+  color: #cdad2b;
 }
 
 .proposition {
@@ -361,13 +407,18 @@ p {
 #ingredients {
   align-self: center;
   width: 30%;
-  background-color: #d5b76f;
-  border-radius: 25px;
-  height: 650px;
+  background-color: #C1A47A;
+  /* border-radius: 25px; */
+  height: 800px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   padding: 20px;
+  margin: 0;
+  /* border: 15px ridge #711B14; */
+  /* box-shadow: 7px 25px 0px 15px #711B14; */
+  z-index: 2
 }
 
 .ingredient {
@@ -390,7 +441,7 @@ p {
 }
 
 .ingredient img {
-  width: 100%;
+  width: 90%;
 }
 
 
@@ -420,7 +471,23 @@ p {
 }
 
 #looserAlert {
+  position: absolute;
+  top: 110px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 25%;
+  z-index: 1;
+  padding: 20px;
+  width: 50%;
+  background-color: #000;
+  font-size: 3rem;
+  line-height: 16px;
+  color: #cdad2b;
+  border: 20px ridge #cdad2b;
+  border-radius: 10px;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -430,31 +497,55 @@ p {
   padding: 20px;
   height: 70%;
   width: 50%;
-  background-color: #31672e;
+  background-color: #000;
   font-size: 3rem;
   line-height: 16px;
   color: #cdad2b;
-  border: 3px outset #d5b76f;
-  border-radius: 20px;
+  border: 20px ridge #cdad2b;;
+  border-radius: 20px; */
+}
+#looserAlert h3{
+  margin: 20px;
+}
+
+#looserAlert p{
+  color: #cdad2b;
 }
 
 #looserAlert img,
-#winnerAlert img,
 #winnerHouse img{
+  margin-top:10px;
+  width: 60%;
+  margin-top: 10px;
+}
+
+#winnerAlert img{
+  margin-top:10px;
   width: 80%;
-  margin: 10px;
+  margin-top: 10px;
 }
 
 #answer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 10px 100px 0;
   align-items: center;
   font-family: "Harry Potter";
 }
 
 #looserAlert .answer {
   width: 10%;
+}
+
+.popupbtn{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.popupbtn .btn{
+  width: 40%;
 }
 
 #winnerAlert, #winnerHouse, #equality{
@@ -472,7 +563,7 @@ p {
   font-size: 3rem;
   line-height: 16px;
   color: #cdad2b;
-  border: 3px outset #d5b76f;
+  border: 20px ridge #cdad2b;
   border-radius: 20px;
 }
 

@@ -20,7 +20,7 @@ function showPopupCharacter(name, image,url) {
   popup.innerHTML = `<div class="characterSort ${name}" >
   <h3>${name} !</h3>
   <img src= ${image} alt="house">
-  <a id="btnCharacterSort" href=${url}>Now let's play !</a>
+  <a id="btnCharacterSort" class="btn" href=${url}>Now let's play !</a>
   </div>`
 }
 

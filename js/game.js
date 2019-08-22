@@ -10,11 +10,11 @@ class Game{
 
 
   randomAnswer(){
-    let proposition =["Flies", "Leeches", "Bicorn Horn", "Boomslang Skin"];
-    let imageProposition =["/images/flies.png", "/images/leeches.png","/images/bicorn-horn.png","/images/boomslang-skin.png"]
+    let proposition =["Flies", "Leeches", "Bicorn Horn", "Boomslang Skin", "Love Philter", "Knotgrass"];
+    let imageProposition =["/images/flies.png", "/images/leeches.png","/images/bicorn-horn.png","/images/boomslang-skin.png","/images/elixir.png","/images/plant.png"]
 
     for(let i = 0; i < 4; i++){
-    let random = Math.floor(Math.random() * 4);
+    let random = Math.floor(Math.random() * 6);
     this.answer.push(proposition[random])
     this.answerImage.push(imageProposition[random])
     }
@@ -80,9 +80,10 @@ class Game{
       }
     }
     this.triesList +=1
-    console.log(this.triesList)
+    if(this.triesList === 2){
+      this.finishGame()
+    }
     this.emptyArray()
-    this.finishGame()
   }
 
   arrayFull(){
@@ -100,12 +101,13 @@ class Game{
   }
 
   finishGame(){
-    if(this.triesList === 2){
-      showPopupLooser()
-
-    }
-
-}
+      if(this.arrayEqual() === true){
+        showPopupWinner()
+      }
+      else{
+        showPopupLooser()
+      }
+  }
 }
 
 let potionMaster = new Game()
@@ -126,6 +128,8 @@ var flies = new Ingredient("Flies", "/images/flies.png");
 var leeches = new Ingredient("Leeches","/images/leeches.png");
 var bicornHorn = new Ingredient("Bicorn Horn", "/images/bicorn-horn.png");
 var boomslangSkin = new Ingredient("Boomslang Skin","/images/boomslang-skin.png")
+var lovePhilter = new Ingredient("Love Philter", "/images/elixir.png");
+var knotgrass = new Ingredient("Knotgrass","/images/plant.png");
 var popup;
 
 window.addEventListener("DOMContentLoaded", function() {
@@ -146,8 +150,10 @@ function showPopupLooser() {
   <img class="answer" src="${potionMaster.answerImage[2]}">
   <img class="answer" src="${potionMaster.answerImage[3]}">
   </div>
-  <button onclick="location.reload()">Play again !</button>
-  <a class="btnAlert" href="/html/intro.html">Menu</a>
+  <div class="popupbtn">
+  <button class="btn" onclick="location.reload()">Play again !</button>
+  <a class="btn" href="/html/intro.html">Menu</a>
+  </div>
   </div>`
 
 }
@@ -155,10 +161,12 @@ function showPopupLooser() {
 function showPopupWinner() {
   popup.classList.add("is-active");
   popup.innerHTML = `<div id="winnerAlert">
-  <h3>100 points for Gryffondor !</h3>
+  <h3>Congratulation!</h3>
   <img src="/images/winner.gif" alt="winner">
-  <button onclick="location.reload()">Play again !</button>
-  <a class="btnAlert" href="/html/intro.html">Menu</a>
+  <div class="popupbtn">
+  <button class="btn" onclick="location.reload()">Play again !</button>
+  <a class="btn" href="/html/intro.html">Menu</a>
+  </div>
   </div>`
 
 }
@@ -191,7 +199,7 @@ function showPopupLooserCup() {
   <img class="answer" src="${potionMaster.answerImage[2]}">
   <img class="answer" src="${potionMaster.answerImage[3]}">
   </div>
-  <button onclick="/html/score.html">Score !</button>
+  <a class="btn" href="/html/score.html">Score !</a>
   </div>`
 
 }
@@ -201,7 +209,7 @@ function showPopupWinnerCup() {
   popup.innerHTML = `<div id="winnerAlert">
   <h3>100 points for Gryffondor !</h3>
   <img src="/images/winner.gif" alt="winner">
-  <button onclick="/html/score.html">Score</button>
+  <a class="btn" href="/html/score.html">Score !</a>
   </div>`
 
 }

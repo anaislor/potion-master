@@ -30,22 +30,29 @@
  function checkWinner(){
    if(localStorage.length === 4){
     let winnerPoints= 0;
-    let winner=[];
-     winnerIs.forEach((house)=>{
-      if(house.points >= winnerPoints){
+    let winner;
+    winnerIs.forEach((house)=>{
+      if(house.points > winnerPoints){
         winnerPoints = Number(house.points);
-        winner.push(house.name)
+        winner = house.name;
       }
      });
-     if(winner.length >1){
-      showPopupEqual()
-     }
-     else {
-     showPopupWinnerCup(winner, winnerPoints)
-     }
+     isEqual(winner,winnerPoints)
    }
-
  };
+
+ function isEqual(winner, winnerPoints){
+  winnerIs.forEach((house)=>{
+    if((house.points === winnerPoints) && !(house.name === winner)){
+      showPopupEqual()
+    }
+   else{
+  showPopupWinnerCup(winner, winnerPoints)
+   }
+ });
+}
+
+
 
  function showPopupWinnerCup(name, points) {
   popup.classList.add("is-active");
@@ -55,7 +62,6 @@
   <a class="btnAlert" href="/housecup/firstscore.html">Play Again</a>
   <a class="btnAlert" href="/html/intro.html">Menu</a>
   </div>`
-
 }
 
 function showPopupEqual() {

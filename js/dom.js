@@ -64,9 +64,17 @@
         printProposition(boomslangSkin.image) 
       }
       else if(data === "Bicorn Horn"){
-        bicornHorn.addToTry(bicornHorn);
+        bicornHorn.addToTry();
         printProposition(bicornHorn.image)
-          }
+      }
+      else if(data === "Love Philter"){
+        lovePhilter.addToTry();
+        printProposition(lovePhilter.image)
+      }
+      else if(data === "Knotgrass"){
+        knotgrass.addToTry();
+        printProposition(knotgrass.image)
+      }
     //verifier si la propostion correspond. Si non, on rejoue
     if(potionMaster.arrayFull()===true){
       printList()
@@ -81,12 +89,16 @@
    const flie = document.getElementById("flies");
    const leech = document.getElementById("leeches");
    const skin = document.getElementById("boomslangSkin");
+   const philter = document.getElementById("lovePhilter");
+   const grass =document.getElementById("knotgrass");
    const blueCaldron = document.getElementById("blueCauldron");
-   console.log(cauldron)
+   
    horn.ondragstart = dragstartHandler;
    flie.ondragstart = dragstartHandler;
    leech.ondragstart = dragstartHandler;
    skin.ondragstart = dragstartHandler;
+   philter.ondragstart = dragstartHandler;
+   grass.ondragstart = dragstartHandler;
    cauldron.ondragover = dragoverHandler;
    cauldron.ondrop = dropHandler;
    
