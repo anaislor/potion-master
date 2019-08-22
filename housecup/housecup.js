@@ -78,12 +78,11 @@ class Game{
       }
       this.scorecalculation()
     }
-
-
     this.triesList +=1
-    console.log(this.triesList)
+    if(this.triesList === 2){
+      this.finishGame()
+    }
     this.emptyArray()
-    this.finishGame()
   }
 
   arrayFull(){
@@ -126,9 +125,12 @@ class Game{
   }   
 
   finishGame(){
-    if(this.triesList === 2){
+    if(this.arrayEqual() === true){
       this.scoreAdded()
-      console.log(slytherin.totalscore)
+      showPopupWinnerCup()
+    }
+    else{
+      this.scoreAdded()
       showPopupLooserCup()
     }
   }
@@ -178,7 +180,7 @@ function showPopupLooserCup() {
   <img class="answer" src="${potionMaster.answerImage[2]}">
   <img class="answer" src="${potionMaster.answerImage[3]}">
   </div>
-  <a class="btnAlert" href="/housecup/score.html">Score</a>
+  <a class="btn" href="/housecup/score.html">Score</a>
   </div>`
 
 }
@@ -186,9 +188,9 @@ function showPopupLooserCup() {
 function showPopupWinnerCup() {
   popup.classList.add("is-active");
   popup.innerHTML = `<div id="winnerAlert">
-  <h3>100 points for Gryffondor !</h3>
+  <h3>Congratulation!</h3>
   <img src="/images/winner.gif" alt="winner">
-  <a class="btnAlert" href="/housecup/score.html">Score</a>
+  <a class="btn" href="/housecup/score.html">Score</a>
   </div>`
 
 }

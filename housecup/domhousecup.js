@@ -41,26 +41,34 @@
    }
  };
 
+ //check if equality
  function isEqual(winner, winnerPoints){
+  let equal = []
   winnerIs.forEach((house)=>{
-    if((house.points === winnerPoints) && !(house.name === winner)){
+      if(Number(house.points) === winnerPoints){
+        equal.push(house.name)
+      }
+      return equal
+ });
+    if(equal.length >= 2){
       showPopupEqual()
     }
-   else{
-  showPopupWinnerCup(winner, winnerPoints)
-   }
- });
+    else{
+      showPopupWinnerCup(winner,winnerPoints)
+    }
 }
 
 
 
  function showPopupWinnerCup(name, points) {
   popup.classList.add("is-active");
-  popup.innerHTML = `<div id="winnerHouse">
+  popup.innerHTML = `<div class="winnerHouse ${name}">
   <h3>${name} win the House Cup with ${points} points!</h3>
   <img src="/images/cup.gif" alt="winner">
-  <a class="btnAlert" href="/housecup/firstscore.html">Play Again</a>
-  <a class="btnAlert" href="/html/intro.html">Menu</a>
+  <div class="popupbtn">
+  <a class="btn" href="/housecup/firstscore.html">Play Again</a>
+  <a class="btn" href="/index.html">Menu</a>
+  </div>
   </div>`
 }
 
@@ -69,8 +77,10 @@ function showPopupEqual() {
   popup.innerHTML = `<div id="equality">
   <h3>Equality...</h3>
   <img src="/images/equality.gif" alt="winner">
-  <a class="btnAlert" href="/housecup/firstscore.html">Play Again</a>
-  <a class="btnAlert" href="/html/intro.html">Menu</a>
+  <div class="popupbtn">
+  <a class="btn" href="/housecup/firstscore.html">Play Again</a>
+  <a class="btn" href="/index.html">Menu</a>
+  </div>
   </div>`
 
 }

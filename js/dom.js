@@ -101,43 +101,4 @@
    grass.ondragstart = dragstartHandler;
    cauldron.ondragover = dragoverHandler;
    cauldron.ondrop = dropHandler;
-   
-
-    //     ingredient.onclick = function(e){
-    //       console.log("ingredient click")
-
-   // document.querySelectorAll(".ingredient img").forEach((ingredient)=>{
-//     ingredient.onclick = function(e){
-//       console.log("ingredient click")
-//     let ingredientItem = e.target;
-
-//     //ajout des propositions
-//     if(ingredientItem.getAttribute("alt") === "Flies"){
-//     flies.addToTry();
-//     printProposition(flies.image)
-//     console.log(potionMaster.try)
-//     }
-//     else if(ingredientItem.getAttribute("alt") === "Leeches"){
-//     leeches.addToTry();
-//     printProposition(leeches.image)
-//     console.log(potionMaster.try)
-//     }
-//     else if(ingredientItem.getAttribute("alt") === "Boomslang Skin"){
-//       boomslangSkin.addToTry()
-//       printProposition(boomslangSkin.image)
-//       console.log(potionMaster.try)
-//     }
-//     else if(ingredientItem.getAttribute("alt") === "Bicorn Horn"){
-//       bicornHorn.addToTry(bicornHorn);
-//       printProposition(bicornHorn.image)
-//       console.log(potionMaster.try)
-//     }
-    
-//     //verifier si la propostion correspond. Si non, on rejoue
-//     if(potionMaster.arrayFull()===true){
-//       console.log("vrai")
-//       printList()
-//       // printHelp()
-//     }
-//   }
-//   });
+  

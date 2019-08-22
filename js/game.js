@@ -152,7 +152,7 @@ function showPopupLooser() {
   </div>
   <div class="popupbtn">
   <button class="btn" onclick="location.reload()">Play again !</button>
-  <a class="btn" href="/html/intro.html">Menu</a>
+  <a class="btn" href="/index.html">Menu</a>
   </div>
   </div>`
 
@@ -165,7 +165,7 @@ function showPopupWinner() {
   <img src="/images/winner.gif" alt="winner">
   <div class="popupbtn">
   <button class="btn" onclick="location.reload()">Play again !</button>
-  <a class="btn" href="/html/intro.html">Menu</a>
+  <a class="btn" href="/index.html">Menu</a>
   </div>
   </div>`
 

@@ -19,6 +19,7 @@ white: #E7E3DD
 
 body {
   position: relative;
+  background-color: #24282C;
 }
 
 footer div {
@@ -53,7 +54,6 @@ h1 {
 h2 {
   font-size: 3rem;
   align-self: center;
-  /* margin-bottom: 10px; */
   font-family: "Harry Potter";
 }
 
@@ -81,18 +81,6 @@ h3 {
   color: black; 
 }
 
-/* button {
-  border-radius: 10px;
-  width: 30%;
-  height: 30px;
-  margin: 10px;
-  font-family: "Harry Potter";
-  font-size: 1.5rem;
-  padding: 5px;
-  background-color: #cdad2b;
-  border: none;
-} */
-
 /*Introduction*/
 p {
   font-family: sans-serif;
@@ -100,7 +88,6 @@ p {
   font-size: 1.8rem;
   width: 100%;
   line-height: 1.3;
-  /* font-weight: lighter; */
 }
 
 #intro {
@@ -146,37 +133,28 @@ p {
   border-radius: 10px;
   padding: 20px;
   height: 60%;
-  border: 20px ridge #cdad2b
-  /* box-shadow: 7px 7px 0px 2px #5F6C75; */
+  border: 20px ridge #cdad2b;
 }
 
 #rules {
-  width: 100%;
-  padding: 20px;
-  padding-right: 50px;
-  text-align: center;
+  width: 50%;
+  padding: 25px;
 }
 
 .ligthning {
-  width: 50%;
+  width: 25%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   text-align: center;
 }
 
 .ligthning img {
-  width: 15%;
+  width: 30%;
+  margin-bottom: 10px;
 }
-
-/* #tips {
-  width: 50%;
-  text-align: center;
-  margin-top: 20px;
-
-} */
 
 #introbtn{
   display: flex;
@@ -185,22 +163,6 @@ p {
   width: 100%;
 }
 /* 
-#introbtn a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px;
-  padding: 10px;
-  border-radius: 10px;
-  width: 20%;
-  font-family: "Harry Potter";
-  font-size: 3rem;
-  background-color: #cdad2b;
-  border: none;
-  text-decoration: none;
-  color: black;
-} */
 
 /*character random*/
 
@@ -487,22 +449,6 @@ p {
   color: #cdad2b;
   border: 20px ridge #cdad2b;
   border-radius: 10px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  left: 50%;
-  top: 50%;
-  z-index: 2000;
-  padding: 20px;
-  height: 70%;
-  width: 50%;
-  background-color: #000;
-  font-size: 3rem;
-  line-height: 16px;
-  color: #cdad2b;
-  border: 20px ridge #cdad2b;;
-  border-radius: 20px; */
 }
 #looserAlert h3{
   margin: 20px;
@@ -548,28 +494,6 @@ p {
   width: 40%;
 }
 
-#winnerAlert, #winnerHouse, #equality{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  left: 50%;
-  top: 70%;
-  z-index: 2000;
-  padding: 20px;
-  height: 80%;
-  width: 50%;
-  background-color: #b32e25;
-  font-size: 3rem;
-  line-height: 16px;
-  color: #cdad2b;
-  border: 20px ridge #cdad2b;
-  border-radius: 20px;
-}
-
-#equality img{
-  width:90%;
-}
 
 /* coupe des 4 maisons score*/
 
@@ -593,45 +517,53 @@ margin-bottom: 20px;
   border: 1px solid black;
   width: 80%;
   padding: 20 0px;
+  background-color: #E7E3DD;
+  border: 20px ridge #cdad2b
 }
 
 #score .btn{
-  width:10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  height: 50px;
-  font-family: "Harry Potter";
-  font-size: 2rem;
-  background-color: #cdad2b;
-  border: none;
-  text-decoration: none;
-  color: black;
+  width:20%;
+  margin: 15px;
 }
 
 #score h2, #score p{
   display: flex;
   align-items: center;
   width: 40%;
-  height: 50px;
-  padding: 15px;
-  border: 1px solid black;
+  padding: 0 15px;
+  color: #cdad2b;
+  text-shadow:#24282C 8px 0 10px;
 }
 
 #score h2{
-  font-size: 3 rem;
+  font-size: 10 rem;
 }
 
 #gryffindor, #slytherin, #hufflepuff, #ravenclaw{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 35px 0;
+  align-items: center;
+  margin: 15px 0;
 }
 
-.btnAlert{
+#gryffindor{
+  background-color: #711B14;
+}
+
+#slytherin{
+  background-color: #1F4C41;
+}
+
+#ravenclaw{
+  background-color: #3267A2;
+}
+
+#hufflepuff{
+  background-color: #CA7B29;
+}
+
+/* .btnAlert{
   width:20%;
   display: flex;
   flex-direction: column;
@@ -645,5 +577,53 @@ margin-bottom: 20px;
   border: none;
   text-decoration: none;
   color: black;
+} */
+
+.winnerHouse{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+  top: 70%;
+  z-index: 2000;
+  padding: 20px;
+  height: 80%;
+  width: 50%;
+  font-size: 3rem;
+  line-height: 16px;
+  color: #cdad2b;
+  border: 20px ridge #cdad2b;
+  border-radius: 20px;
 }
 
+.winnerHouse .btn{
+  width:40%;
+}
+
+.winnerHouse h3{
+  text-transform: capitalize;
+}
+
+#equality{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+  top: 70%;
+  z-index: 2000;
+  padding: 20px;
+  height: 80%;
+  width: 50%;
+  background-color: #5F6C75;
+  font-size: 3rem;
+  line-height: 16px;
+  color: #cdad2b;
+  border: 20px ridge #cdad2b;
+  border-radius: 20px;
+}
+
+#equality img{
+  width:90%;
+}

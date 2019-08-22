@@ -333,3 +333,26 @@ footer div {
   border: 20px ridge #cdad2b;
   border-radius: 20px;
 }
+
+/* House cup*/
+
+#winnerHouse{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+  top: 70%;
+  z-index: 2000;
+  padding: 20px;
+  height: 80%;
+  width: 50%;
+  background-color: #b32e25;
+  font-size: 3rem;
+  line-height: 16px;
+  color: #cdad2b;
+  border: 20px ridge #cdad2b;
+  border-radius: 20px;
+}
+
+
