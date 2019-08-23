@@ -181,7 +181,7 @@ function showPopupLooser() {
 function showPopupWinner(score, name) {
   popup.classList.add("is-active");
   popup.innerHTML = `<div id="winnerAlert">
-  <h3>${score} points for ${name} !</h3>
+  <h3>${score} points for <span>${name}<span> !</h3>
   <img src="../images/winner.gif" alt="winner">
   <div class="popupbtn">
   <button class="btn" onclick="location.reload()">Play again !</button>

@@ -348,6 +348,10 @@ footer h2 {
   margin-top: 10px;
 }
 
+#winnerAlert span {
+  text-transform: capitalize;
+}
+
 #answer {
   display: flex;
   flex-direction: row;
