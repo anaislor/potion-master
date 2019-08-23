@@ -74,8 +74,9 @@ class Game {
       let filteranswer = answerleft.filter(word => word === tryleft[j]);
       if (
         filtertry.length <= filteranswer.length &&
-        j - 1 <= filteranswer.length
+        j <= filteranswer.length - 1
       ) {
+        console.log(`filter length-1 ${filteranswer.length - 1}`);
         console.log(`${tryleft[j]} is in the answer but not at the good place`);
         let helpRed = document.querySelector(".try:last-child");
         helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
@@ -83,6 +84,7 @@ class Game {
         console.log(`${tryleft[j]} not found in the answer`);
       }
     }
+
     if (this.arrayEqual() === true) {
       showPopupWinner(this.score, this.player[0]);
     }
