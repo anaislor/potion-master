@@ -13,8 +13,11 @@ white: #E7E3DD
 
 * {
   box-sizing: border-box;
-  font: 5px;
   margin: 0;
+}
+
+html {
+  font-size: 5px;
 }
 
 body {
@@ -23,10 +26,10 @@ body {
   height: 100vh;
 }
 
-/* footer div {
+footer div {
   height: 150px;
   background-color: #24282c;
-} */
+}
 
 .mainLogo {
   text-decoration: none;
@@ -39,7 +42,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   background-image: url("../images//header-theme.jpg");
   height: 10%;
 }

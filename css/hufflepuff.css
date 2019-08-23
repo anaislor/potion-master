@@ -12,8 +12,11 @@ light: #DED0AE
 
 * {
   box-sizing: border-box;
-  font: 10px;
   margin: 0;
+}
+
+html {
+  font-size: 5px;
 }
 
 body {
