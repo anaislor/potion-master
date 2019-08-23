@@ -8,7 +8,7 @@ light: #C1A47A
 */
 @font-face {
   font-family: "Harry Potter";
-  src: url("/font/HARRYP__.TTF");
+  src: url("../font/HARRYP__.TTF");
 }
 
 * {
@@ -72,7 +72,7 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  background-image: url("/images/header-gryffindor.jpg");
+  background-image: url("../images/header-gryffindor.jpg");
   height: 100px;
 }
 

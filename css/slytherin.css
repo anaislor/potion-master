@@ -8,7 +8,7 @@ light: #A8977E
 
 @font-face {
   font-family: "Harry Potter";
-  src: url("/font/HARRYP__.TTF");
+  src: url("../font/HARRYP__.TTF");
 }
 
 * {
@@ -70,7 +70,7 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  background-image: url("/images/header-slytherin.jpg");
+  background-image: url("../images/header-slytherin.jpg");
   height: 100px;
 }
 

@@ -18,12 +18,12 @@ class Game {
       "Knotgrass"
     ];
     let imageProposition = [
-      "/images/flies.png",
-      "/images/leeches.png",
-      "/images/bicorn-horn.png",
-      "/images/boomslang-skin.png",
-      "/images/elixir.png",
-      "/images/plant.png"
+      "../images/flies.png",
+      "../images/leeches.png",
+      "../images/bicorn-horn.png",
+      "../images/boomslang-skin.png",
+      "../images/elixir.png",
+      "../images/plant.png"
     ];
 
     for (let i = 0; i < 4; i++) {
@@ -56,7 +56,7 @@ class Game {
         if (this.try[i] === this.answer[i]) {
           console.log(`${this.try[i]} is in the array at the good place`);
           let helpGreen = document.querySelector(".try:last-child");
-          helpGreen.innerHTML += `<img class="help" src="/images/green.png">`;
+          helpGreen.innerHTML += `<img class="help" src="../images/green.png">`;
         } else {
           console.log(`${this.try[i]} is not found yet!`);
           answerleft.push(this.answer[i]);
@@ -78,7 +78,7 @@ class Game {
       ) {
         console.log(`${tryleft[j]} is in the answer but not at the good place`);
         let helpRed = document.querySelector(".try:last-child");
-        helpRed.innerHTML += `<img class="help" src="/images/red.png">`;
+        helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
       } else {
         console.log(`${tryleft[j]} not found in the answer`);
       }
@@ -135,15 +135,15 @@ class Ingredient {
   }
 }
 
-var flies = new Ingredient("Flies", "/images/flies.png");
-var leeches = new Ingredient("Leeches", "/images/leeches.png");
-var bicornHorn = new Ingredient("Bicorn Horn", "/images/bicorn-horn.png");
+var flies = new Ingredient("Flies", "../images/flies.png");
+var leeches = new Ingredient("Leeches", "../images/leeches.png");
+var bicornHorn = new Ingredient("Bicorn Horn", "../images/bicorn-horn.png");
 var boomslangSkin = new Ingredient(
   "Boomslang Skin",
   "/images/boomslang-skin.png"
 );
-var lovePhilter = new Ingredient("Love Philter", "/images/elixir.png");
-var knotgrass = new Ingredient("Knotgrass", "/images/plant.png");
+var lovePhilter = new Ingredient("Love Philter", "../images/elixir.png");
+var knotgrass = new Ingredient("Knotgrass", "../images/plant.png");
 var popup;
 
 window.addEventListener("DOMContentLoaded", function() {
@@ -157,7 +157,7 @@ function showPopupLooser() {
   popup.classList.add("is-active");
   popup.innerHTML = `<div id="looserAlert">
   <h3>Looser...</h3>
-  <img src="/images/looser.gif" alt="looser">
+  <img src="../images/looser.gif" alt="looser">
   <div id="answer">
   <p>The good recipe</p>
   <img class="answer" src="${potionMaster.answerImage[0]}">
@@ -167,7 +167,7 @@ function showPopupLooser() {
   </div>
   <div class="popupbtn">
   <button class="btn" onclick="location.reload()">Play again !</button>
-  <a class="btn" href="/index.html">Menu</a>
+  <a class="btn" href="../index.html">Menu</a>
   </div>
   </div>`;
   potionMaster.player.push(title);
@@ -178,10 +178,10 @@ function showPopupWinner(score, name) {
   popup.classList.add("is-active");
   popup.innerHTML = `<div id="winnerAlert">
   <h3>${score} points for ${name} !</h3>
-  <img src="/images/winner.gif" alt="winner">
+  <img src="../images/winner.gif" alt="winner">
   <div class="popupbtn">
   <button class="btn" onclick="location.reload()">Play again !</button>
-  <a class="btn" href="/index.html">Menu</a>
+  <a class="btn" href="../index.html">Menu</a>
   </div>
   </div>`;
 }
@@ -197,48 +197,21 @@ class Character {
 
 var gryffindor = new Character(
   "gryffindor",
-  "/images/gryffindor.png",
-  "/html/gryffindor.html"
+  "../images/gryffindor.png",
+  "../html/gryffindor.html"
 );
 var slytherin = new Character(
   "slytherin",
-  "/images/slytherin.png",
-  "/html/slytherin.html"
+  "../images/slytherin.png",
+  "../html/slytherin.html"
 );
 var hufflepuff = new Character(
   "hufflepuff",
-  "/images/hufflepuff.png",
-  "/html/hufflepuff.html"
+  "../images/hufflepuff.png",
+  "../html/hufflepuff.html"
 );
 var ravenclaw = new Character(
   "ravenclaw",
-  "/images/ravenclaw.png",
-  "/html/ravenclaw.html"
+  "../images/ravenclaw.png",
+  "../html/ravenclaw.html"
 );
-
-// house cup
-
-function showPopupLooserCup() {
-  popup.classList.add("is-active");
-  popup.innerHTML = `<div id="looserAlert">
-  <h3>Looser...</h3>
-  <img src="/images/looser.gif" alt="looser">
-  <div id="answer">
-  <p>The good recipe</p>
-  <img class="answer" src="${potionMaster.answerImage[0]}">
-  <img class="answer" src="${potionMaster.answerImage[1]}">
-  <img class="answer" src="${potionMaster.answerImage[2]}">
-  <img class="answer" src="${potionMaster.answerImage[3]}">
-  </div>
-  <a class="btn" href="/html/score.html">Score !</a>
-  </div>`;
-}
-
-function showPopupWinnerCup() {
-  popup.classList.add("is-active");
-  popup.innerHTML = `<div id="winnerAlert">
-  <h3>100 points for Gryffondor !</h3>
-  <img src="/images/winner.gif" alt="winner">
-  <a class="btn" href="/html/score.html">Score !</a>
-  </div>`;
-}
