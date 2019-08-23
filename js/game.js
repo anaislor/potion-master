@@ -140,7 +140,7 @@ var leeches = new Ingredient("Leeches", "../images/leeches.png");
 var bicornHorn = new Ingredient("Bicorn Horn", "../images/bicorn-horn.png");
 var boomslangSkin = new Ingredient(
   "Boomslang Skin",
-  "/images/boomslang-skin.png"
+  "../images/boomslang-skin.png"
 );
 var lovePhilter = new Ingredient("Love Philter", "../images/elixir.png");
 var knotgrass = new Ingredient("Knotgrass", "../images/plant.png");

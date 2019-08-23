@@ -202,7 +202,7 @@ function showPopupLooserCup() {
   <img class="answer" src="${potionMaster.answerImage[2]}">
   <img class="answer" src="${potionMaster.answerImage[3]}">
   </div>
-  <a class="btn" href="/housecup/score.html">Score</a>
+  <a class="btn" href="./housecup/score.html">Score</a>
   </div>`;
 }
 
@@ -211,6 +211,6 @@ function showPopupWinnerCup(score, name) {
   popup.innerHTML = `<div id="winnerAlert">
   <h3>${score} points for ${name} !</h3>
   <img src="../images/winner.gif" alt="winner">
-  <a class="btn" href="/housecup/score.html">Score</a>
+  <a class="btn" href="./housecup/score.html">Score</a>
   </div>`;
 }

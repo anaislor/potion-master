@@ -17,7 +17,7 @@ light: #C1A47A
 }
 
 html {
-  font-size: 10px;
+  font-size: 20px;
 }
 
 body {
@@ -171,7 +171,6 @@ footer h2 {
   margin-top: 0;
   align-self: flex-end;
   background-color: #711b14;
-  /* border-radius: 20px; */
   width: 35%;
   display: flex;
   flex-direction: row;

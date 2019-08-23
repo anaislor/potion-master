@@ -17,7 +17,7 @@ light: #A8977E
 }
 
 html {
-  font-size: 10px;
+  font-size: 20px;
 }
 
 body {
@@ -118,14 +118,14 @@ h3 {
   margin: 0;
   font-family: sans-serif;
 }
-/* 
+
 footer div {
   height: 150px;
   background-color: #050c0a;
   display: flex;
   flex-direction: row;
   justify-content: center;
-} */
+}
 
 footer h2 {
   position: absolute;
@@ -156,7 +156,7 @@ footer h2 {
 
 #containerGame {
   background-color: #050c0a;
-  height: 90%;
+  height: 800px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
@@ -243,7 +243,7 @@ footer h2 {
   align-self: center;
   width: 35%;
   background-color: #0f1c19;
-  height: 90%;
+  height: 800px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
