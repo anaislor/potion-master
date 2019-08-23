@@ -59,7 +59,7 @@ function showPopupWinnerCup(name, points) {
   <h3>${name} win the House Cup with ${points} points!</h3>
   <img src="../images/cup.gif" alt="winner">
   <div class="popupbtn">
-  <a class="btn" href="./housecup/firstscore.html">Play Again</a>
+  <a class="btn" href="../housecup/firstscore.html">Play Again</a>
   <a class="btn" href="../index.html">Menu</a>
   </div>
   </div>`;
@@ -71,7 +71,7 @@ function showPopupEqual() {
   <h3>Equality...</h3>
   <img src="../images/equality.gif" alt="winner">
   <div class="popupbtn">
-  <a class="btn" href="./housecup/firstscore.html">Play Again</a>
+  <a class="btn" href="../housecup/firstscore.html">Play Again</a>
   <a class="btn" href="../index.html">Menu</a>
   </div>
   </div>`;
