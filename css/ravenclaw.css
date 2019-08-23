@@ -19,6 +19,7 @@ light: #C4AC92
 
 body {
   position: relative;
+  height: 100vh;
 }
 
 h1 {
