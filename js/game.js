@@ -50,6 +50,8 @@ class Game {
   checkIf() {
     let answerleft = [];
     let tryleft = [];
+    console.log(answerleft);
+    console.log(answerleft);
     for (let i = 0; i < this.try.length; i++) {
       if (this.answer.includes(this.try[i])) {
         //vérifier si l'ingrédient est présent et à la bonne place
@@ -89,7 +91,11 @@ class Game {
 
     if (this.arrayEqual() === true) {
       showPopupWinner(this.score, this.player[0]);
+      tryleft.splice(0, 4);
+      answerleft.splice(0, 4);
     }
+    tryleft.splice(0, 4);
+    answerleft.splice(0, 4);
     this.triesList += 1;
     this.scorecalculation();
     if (this.triesList === 12) {
@@ -113,7 +119,7 @@ class Game {
   }
 
   emptyArray() {
-    return this.try.splice(0, 4);
+    this.try.splice(0, 4);
   }
 
   finishGame() {

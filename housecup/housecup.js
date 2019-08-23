@@ -84,6 +84,8 @@ class Game {
       }
     }
     //vérifier si l'ingrédient est présent mais pas à la bonne place
+    console.log(`answer left ${answerleft}`);
+    console.log(`try left ${tryleft}`);
     for (let j = 0; j < tryleft.length; j++) {
       let filtertry = tryleft.filter(word => word === tryleft[j]);
       let filteranswer = answerleft.filter(word => word === tryleft[j]);
@@ -101,9 +103,13 @@ class Game {
     if (this.arrayEqual() === true) {
       this.scoreAdded();
       showPopupWinnerCup(this.score, this.player[0]);
+      tryleft.splice(0, 4);
+      answerleft.splice(0, 4);
     }
     this.scorecalculation();
     this.triesList += 1;
+    tryleft.splice(0, 4);
+    answerleft.splice(0, 4);
     if (this.triesList === 12) {
       this.finishGame();
     }
