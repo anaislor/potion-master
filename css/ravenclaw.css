@@ -56,7 +56,7 @@ h3 {
   border-radius: 10px;
   width: 20%;
   font-family: "Harry Potter";
-  font-size: 3rem;
+  font-size: 1.5rem;
   background-color: #cdad2b;
   border: 10px outset #ba9809;
   text-decoration: none;
@@ -407,7 +407,7 @@ footer h2 {
   height: 80%;
   width: 50%;
   background-color: #3267a2;
-  font-size: 3rem;
+  font-size: 1.5 rem;
   line-height: 16px;
   color: #cdad2b;
   border: 20px ridge #cdad2b;
