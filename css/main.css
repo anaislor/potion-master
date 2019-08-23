@@ -13,7 +13,7 @@ white: #E7E3DD
 
 * {
   box-sizing: border-box;
-  font: 10px;
+  font: 5px;
   margin: 0;
 }
 
@@ -23,10 +23,10 @@ body {
   height: 100vh;
 }
 
-footer div {
+/* footer div {
   height: 150px;
   background-color: #24282c;
-}
+} */
 
 .mainLogo {
   text-decoration: none;
@@ -41,7 +41,7 @@ footer div {
   align-items: center;
   width: 100%;
   background-image: url("../images//header-theme.jpg");
-  height: 100px;
+  height: 10%;
 }
 
 h1 {
@@ -98,7 +98,7 @@ p {
   align-items: center;
   padding: 50px;
   background-image: url("../images/homepage.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -283,9 +283,7 @@ p {
   justify-content: space-around;
   align-content: center;
   background-color: #711b14;
-  /* border: 15px ridge #711B14; */
   height: 800px;
-  /* width: ; */
 }
 
 #containerGame {
@@ -302,7 +300,6 @@ p {
   margin-top: 0;
   align-self: flex-end;
   background-color: #711b14;
-  /* border-radius: 20px; */
   width: 35%;
   display: flex;
   flex-direction: row;
@@ -378,7 +375,6 @@ p {
   align-self: center;
   width: 30%;
   background-color: #c1a47a;
-  /* border-radius: 25px; */
   height: 800px;
   display: flex;
   flex-direction: column;
