@@ -14,10 +14,10 @@ function randomCharacter() {
     "../images/ravenclaw.png"
   ];
   let urlproposition = [
-    "/html/gryffindor.html",
-    "/html/slytherin.html",
-    "/html/hufflepuff.html",
-    "/html/ravenclaw.html"
+    "../html/gryffindor.html",
+    "../html/slytherin.html",
+    "../html/hufflepuff.html",
+    "../html/ravenclaw.html"
   ];
 
   let random = Math.floor(Math.random() * 4);
