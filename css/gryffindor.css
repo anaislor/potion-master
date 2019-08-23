@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: "Harry Potter";
   color: #cdad2b;
   text-shadow: #181312 8px 0 10px;
@@ -101,7 +101,7 @@ footer h2 {
   position: absolute;
   top: 110px;
   left: 30%;
-  font-size: 6rem;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -144,6 +144,7 @@ footer h2 {
   text-align: left;
   margin: 0;
   font-family: sans-serif;
+  font-size: 0.8rem;
 }
 
 /*main game*/
@@ -278,7 +279,7 @@ footer h2 {
 }
 
 .ingredient img {
-  width: 80%;
+  width: 70%;
   left: 0;
 }
 
