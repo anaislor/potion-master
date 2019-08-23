@@ -24,6 +24,7 @@ body {
   position: relative;
   background-color: #24282c;
   height: 100vh;
+  width: 100vh;
   background-image: url("../images/homepage.jpg");
   background-size: overlay;
   background-repeat: repeat;
@@ -51,7 +52,7 @@ footer div {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: "Harry Potter";
   color: #cdad2b;
   text-shadow: #24282c 8px 0 10px;
