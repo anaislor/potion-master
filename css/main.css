@@ -24,6 +24,9 @@ body {
   position: relative;
   background-color: #24282c;
   height: 100vh;
+  background-image: url("../images/homepage.jpg");
+  background-size: overlay;
+  background-repeat: repeat;
 }
 
 footer div {
@@ -88,7 +91,7 @@ h3 {
 p {
   font-family: sans-serif;
   color: black;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   width: 100%;
   line-height: 1.3;
 }
@@ -99,10 +102,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: o 20px;
-  background-image: url("../images/homepage.jpg");
-  background-size: overlay;
-  background-repeat: repeat;
+  padding: 0 20px;
   width: 100vw;
 }
 
@@ -125,6 +125,7 @@ p {
   margin-bottom: 10px;
   font-size: 5rem;
   text-shadow: #24282c 8px 0 10px;
+  margin-top: 40px;
 }
 
 #explanation {
@@ -175,6 +176,7 @@ p {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  margin-top: 40px;
 }
 /* 
 

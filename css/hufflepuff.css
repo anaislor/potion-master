@@ -126,6 +126,14 @@ footer div {
   justify-content: center;
 }
 
+footer h2 {
+  position: absolute;
+  top: 110px;
+  left: 30%;
+  font-size: 4rem;
+  text-align: center;
+}
+
 /*main game*/
 
 #poudlard {
