@@ -65,18 +65,20 @@ class Game {
       }
       //ingrédient n'existe pas
       else {
+        answerleft.push(this.answer[i]);
         console.log(`${this.try[i]} not found in the answer`);
       }
     }
+    console.log(`answer left ${answerleft}`);
+    console.log(`try left ${tryleft}`);
     //vérifier si l'ingrédient est présent mais pas à la bonne place
     for (let j = 0; j < tryleft.length; j++) {
       let filtertry = tryleft.filter(word => word === tryleft[j]);
       let filteranswer = answerleft.filter(word => word === tryleft[j]);
       if (
         filtertry.length <= filteranswer.length &&
-        j <= filteranswer.length - 1
+        j - (tryleft.indexOf(tryleft[j]) + 1) <= filteranswer.length
       ) {
-        console.log(`filter length-1 ${filteranswer.length - 1}`);
         console.log(`${tryleft[j]} is in the answer but not at the good place`);
         let helpRed = document.querySelector(".try:last-child");
         helpRed.innerHTML += `<img class="help" src="../images/red.png">`;

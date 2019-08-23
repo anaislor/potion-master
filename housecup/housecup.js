@@ -89,7 +89,7 @@ class Game {
       let filteranswer = answerleft.filter(word => word === tryleft[j]);
       if (
         filtertry.length <= filteranswer.length &&
-        j - 1 <= filteranswer.length
+        j - (tryleft.indexOf(tryleft[j]) + 1) <= filteranswer.length
       ) {
         console.log(`${tryleft[j]} is in the answer but not at the good place`);
         let helpRed = document.querySelector(".try:last-child");
