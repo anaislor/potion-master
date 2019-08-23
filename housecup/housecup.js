@@ -90,8 +90,15 @@ class Game {
       let filtertry = tryleft.filter(word => word === tryleft[j]);
       let filteranswer = answerleft.filter(word => word === tryleft[j]);
       if (
-        filtertry.length <= filteranswer.length &&
-        j - (tryleft.indexOf(tryleft[j]) + 1) <= filteranswer.length
+        tryleft.indexOf(tryleft[j]) === 0 &&
+        j - tryleft.indexOf(tryleft[j] + 1) <= filteranswer.length
+      ) {
+        console.log(`${tryleft[j]} is in the answer but not at the good place`);
+        let helpRed = document.querySelector(".try:last-child");
+        helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
+      } else if (
+        tryleft.indexOf(tryleft[j]) > 0 &&
+        j - tryleft.indexOf(tryleft[j]) <= filteranswer.length
       ) {
         console.log(`${tryleft[j]} is in the answer but not at the good place`);
         let helpRed = document.querySelector(".try:last-child");
@@ -99,7 +106,21 @@ class Game {
       } else {
         console.log(`${tryleft[j]} not found in the answer`);
       }
+      // } else {
+      //   console.log(`${tryleft[j]} not found in the answer`);
+      // }
     }
+    //   if (
+    //     filtertry.length <= filteranswer.length &&
+    //     j - (tryleft.indexOf(tryleft[j]) + 1) <= filteranswer.length
+    //   ) {
+    //     console.log(`${tryleft[j]} is in the answer but not at the good place`);
+    //     let helpRed = document.querySelector(".try:last-child");
+    //     helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
+    //   } else {
+    //     console.log(`${tryleft[j]} not found in the answer`);
+    //   }
+    // }
     if (this.arrayEqual() === true) {
       this.scoreAdded();
       showPopupWinnerCup(this.score, this.player[0]);
