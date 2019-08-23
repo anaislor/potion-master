@@ -100,7 +100,7 @@ class Game {
     }
     if (this.arrayEqual() === true) {
       this.scoreAdded();
-      showPopupWinnerCup();
+      showPopupWinnerCup(this.score, this.player[0]);
     }
     this.scorecalculation();
     this.triesList += 1;
@@ -147,7 +147,7 @@ class Game {
   finishGame() {
     if (this.arrayEqual() === true) {
       this.scoreAdded();
-      showPopupWinnerCup();
+      showPopupWinnerCup(this.score, this.player[0]);
     } else {
       this.scoreAdded();
       showPopupLooserCup();
@@ -206,10 +206,10 @@ function showPopupLooserCup() {
   </div>`;
 }
 
-function showPopupWinnerCup() {
+function showPopupWinnerCup(score, name) {
   popup.classList.add("is-active");
   popup.innerHTML = `<div id="winnerAlert">
-  <h3>Congratulation!</h3>
+  <h3>${score} points for ${name} !</h3>
   <img src="/images/winner.gif" alt="winner">
   <a class="btn" href="/housecup/score.html">Score</a>
   </div>`;

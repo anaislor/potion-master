@@ -4,7 +4,8 @@ class Game {
     this.answerImage = [];
     this.triesList = 0;
     this.try = [];
-    this.players = [];
+    this.player = [];
+    this.score = 120;
   }
 
   randomAnswer() {
@@ -60,11 +61,6 @@ class Game {
           console.log(`${this.try[i]} is not found yet!`);
           answerleft.push(this.answer[i]);
           tryleft.push(this.try[i]);
-          // console.log(
-          //   `${this.try[i]} is in the answer but not at the good place`
-          // );
-          // let helpRed = document.querySelector(".try:last-child");
-          // helpRed.innerHTML += `<img class="help" src="/images/red.png">`;
         }
       }
       //ingrédient n'existe pas
@@ -88,10 +84,10 @@ class Game {
       }
     }
     if (this.arrayEqual() === true) {
-      showPopupWinner();
+      showPopupWinner(this.score, this.player[0]);
     }
     this.triesList += 1;
-
+    this.scorecalculation();
     if (this.triesList === 12) {
       this.finishGame();
     }
@@ -107,13 +103,18 @@ class Game {
     }
   }
 
+  scorecalculation() {
+    this.score -= 10;
+    console.log(this.score);
+  }
+
   emptyArray() {
     return this.try.splice(0, 4);
   }
 
   finishGame() {
     if (this.arrayEqual() === true) {
-      showPopupWinner();
+      showPopupWinner(this.score, this.player[0]);
     } else {
       showPopupLooser();
     }
@@ -147,6 +148,8 @@ var popup;
 
 window.addEventListener("DOMContentLoaded", function() {
   popup = document.getElementById("popup_1");
+  let title = document.title;
+  potionMaster.player.push(title);
 });
 
 //afficher les alertes
@@ -167,12 +170,14 @@ function showPopupLooser() {
   <a class="btn" href="/index.html">Menu</a>
   </div>
   </div>`;
+  potionMaster.player.push(title);
+  console.log(potionMaster.player[0]);
 }
 
-function showPopupWinner() {
+function showPopupWinner(score, name) {
   popup.classList.add("is-active");
   popup.innerHTML = `<div id="winnerAlert">
-  <h3>Congratulation!</h3>
+  <h3>${score} points for ${name} !</h3>
   <img src="/images/winner.gif" alt="winner">
   <div class="popupbtn">
   <button class="btn" onclick="location.reload()">Play again !</button>
