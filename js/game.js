@@ -48,8 +48,8 @@ class Game {
   }
 
   checkIf() {
-    let answerleft = [];
-    let tryleft = [];
+    let answerleft = [0];
+    let tryleft = [0];
     console.log(answerleft);
     console.log(answerleft);
     for (let i = 0; i < this.try.length; i++) {
@@ -74,43 +74,29 @@ class Game {
     console.log(`answer left ${answerleft}`);
     console.log(`try left ${tryleft}`);
     //vérifier si l'ingrédient est présent mais pas à la bonne place
-    for (let j = 0; j < tryleft.length; j++) {
-      let filtertry = tryleft.filter(word => word === tryleft[j]);
-      let filteranswer = answerleft.filter(word => word === tryleft[j]);
-      // if (
-      //   filtertry.length <= filteranswer.length
-      //   // &&
-      //   // filtertry[j] === answerleft[j]
-      // ) {
-      if (
-        tryleft.indexOf(tryleft[j]) === 0 &&
-        j - tryleft.indexOf(tryleft[j] + 1) <= filteranswer.length
-      ) {
+    let sumanswer;
+    for (let j = 1; j < tryleft.length; j++) {
+      let filtertry = tryleft.filter(word => word === tryleft[j]).length - j;
+      let filteranswer = answerleft.filter(word => word === tryleft[j]).length;
+      console.log(`filter answer ${filteranswer}`);
+      console.log(`filter try ${filtertry}`);
+      if (filtertry <= filteranswer && filteranswer > 0) {
         console.log(`${tryleft[j]} is in the answer but not at the good place`);
-        let helpRed = document.querySelector(".try:last-child");
-        helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
-      } else if (
-        tryleft.indexOf(tryleft[j]) > 0 &&
-        j - tryleft.indexOf(tryleft[j]) <= filteranswer.length
-      ) {
-        console.log(`${tryleft[j]} is in the answer but not at the good place`);
+        answerleft.splice(answerleft.indexOf(tryleft[j]), 1);
         let helpRed = document.querySelector(".try:last-child");
         helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
       } else {
         console.log(`${tryleft[j]} not found in the answer`);
       }
-      // } else {
-      //   console.log(`${tryleft[j]} not found in the answer`);
-      // }
     }
 
     if (this.arrayEqual() === true) {
       showPopupWinner(this.score, this.player[0]);
-      tryleft.splice(0, 4);
-      answerleft.splice(0, 4);
+      tryleft.splice(1, 4);
+      answerleft.splice(1, 4);
     }
-    tryleft.splice(0, 4);
-    answerleft.splice(0, 4);
+    tryleft.splice(1, 4);
+    answerleft.splice(1, 4);
     this.triesList += 1;
     this.scorecalculation();
     if (this.triesList === 12) {

@@ -177,6 +177,7 @@ footer h2 {
   justify-content: flex-start;
   align-self: flex-start;
   flex-wrap: wrap;
+  padding-left: 15px;
 }
 
 #tries h2 {
@@ -192,7 +193,7 @@ footer h2 {
   align-items: flex-start;
   width: 100%;
   font-family: sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #cdad2b;
 }
 

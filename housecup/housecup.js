@@ -61,8 +61,10 @@ class Game {
   }
 
   checkIf() {
-    let answerleft = [];
-    let tryleft = [];
+    let answerleft = [0];
+    let tryleft = [0];
+    console.log(answerleft);
+    console.log(answerleft);
     for (let i = 0; i < this.try.length; i++) {
       if (this.answer.includes(this.try[i])) {
         //vérifier si l'ingrédient est présent et à la bonne place
@@ -70,67 +72,46 @@ class Game {
           console.log(`${this.try[i]} is in the array at the good place`);
           let helpGreen = document.querySelector(".try:last-child");
           helpGreen.innerHTML += `<img class="help" src="../images/green.png">`;
-        }
-        //vérifier si l'ingrédient est présent mais pas à la bonne place
-        else {
-          console.log(`${this.try[i]} is not found yet`);
+        } else {
+          console.log(`${this.try[i]} is not found yet!`);
           answerleft.push(this.answer[i]);
           tryleft.push(this.try[i]);
         }
       }
       //ingrédient n'existe pas
       else {
+        answerleft.push(this.answer[i]);
         console.log(`${this.try[i]} not found in the answer`);
       }
     }
-    //vérifier si l'ingrédient est présent mais pas à la bonne place
     console.log(`answer left ${answerleft}`);
     console.log(`try left ${tryleft}`);
-    for (let j = 0; j < tryleft.length; j++) {
-      let filtertry = tryleft.filter(word => word === tryleft[j]);
-      let filteranswer = answerleft.filter(word => word === tryleft[j]);
-      if (
-        tryleft.indexOf(tryleft[j]) === 0 &&
-        j - tryleft.indexOf(tryleft[j] + 1) <= filteranswer.length
-      ) {
+    //vérifier si l'ingrédient est présent mais pas à la bonne place
+    for (let j = 1; j < tryleft.length; j++) {
+      let filtertry = tryleft.filter(word => word === tryleft[j]).length - j;
+      let filteranswer = answerleft.filter(word => word === tryleft[j]).length;
+      console.log(`filter answer ${filteranswer}`);
+      console.log(`filter try ${filtertry}`);
+      if (filtertry <= filteranswer && filteranswer > 0) {
         console.log(`${tryleft[j]} is in the answer but not at the good place`);
-        let helpRed = document.querySelector(".try:last-child");
-        helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
-      } else if (
-        tryleft.indexOf(tryleft[j]) > 0 &&
-        j - tryleft.indexOf(tryleft[j]) <= filteranswer.length
-      ) {
-        console.log(`${tryleft[j]} is in the answer but not at the good place`);
+        answerleft.splice(answerleft.indexOf(tryleft[j]), 1);
         let helpRed = document.querySelector(".try:last-child");
         helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
       } else {
         console.log(`${tryleft[j]} not found in the answer`);
       }
-      // } else {
-      //   console.log(`${tryleft[j]} not found in the answer`);
-      // }
     }
-    //   if (
-    //     filtertry.length <= filteranswer.length &&
-    //     j - (tryleft.indexOf(tryleft[j]) + 1) <= filteranswer.length
-    //   ) {
-    //     console.log(`${tryleft[j]} is in the answer but not at the good place`);
-    //     let helpRed = document.querySelector(".try:last-child");
-    //     helpRed.innerHTML += `<img class="help" src="../images/red.png">`;
-    //   } else {
-    //     console.log(`${tryleft[j]} not found in the answer`);
-    //   }
-    // }
+
     if (this.arrayEqual() === true) {
       this.scoreAdded();
       showPopupWinnerCup(this.score, this.player[0]);
-      tryleft.splice(0, 4);
-      answerleft.splice(0, 4);
+      tryleft.splice(1, 4);
+      answerleft.splice(1, 4);
     }
     this.scorecalculation();
     this.triesList += 1;
-    tryleft.splice(0, 4);
-    answerleft.splice(0, 4);
+    tryleft.splice(1, 4);
+    answerleft.splice(1, 4);
     if (this.triesList === 12) {
       this.finishGame();
     }
