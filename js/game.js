@@ -74,7 +74,6 @@ class Game {
     console.log(`answer left ${answerleft}`);
     console.log(`try left ${tryleft}`);
     //vérifier si l'ingrédient est présent mais pas à la bonne place
-    let sumanswer;
     for (let j = 1; j < tryleft.length; j++) {
       let filtertry = tryleft.filter(word => word === tryleft[j]).length - j;
       let filteranswer = answerleft.filter(word => word === tryleft[j]).length;

@@ -23,6 +23,7 @@ html {
 body {
   position: relative;
   height: 100vh;
+  background-color: #181211;
 }
 
 h1 {
@@ -102,9 +103,9 @@ footer div {
 
 footer h2 {
   position: absolute;
+  width: 100%;
   top: 110px;
-  left: 30%;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -154,12 +155,10 @@ footer h2 {
   justify-content: space-around;
   align-content: center;
   background-color: #711b14;
-  height: 800px;
 }
 
 #containerGame {
   background-color: #181312;
-  height: 800px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
@@ -247,10 +246,8 @@ footer h2 {
   align-self: center;
   width: 35%;
   background-color: #300909;
-  height: 800px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
   padding: 20px;
   margin: 0;
@@ -414,4 +411,370 @@ footer h2 {
   color: #cdad2b;
   border: 20px ridge #cdad2b;
   border-radius: 20px;
+}
+
+/* media queries for responsive*/
+
+/* phones, under 413px */
+@media screen and (max-width: 413px) {
+  #poudlard {
+    display: none;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #potionMaster {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #empty {
+    width: 0;
+  }
+
+  #tip {
+    width: 80%;
+  }
+
+  .ligthning :first-child {
+    width: 70%;
+  }
+
+  .ligthning p {
+    font-size: 0.5rem;
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  #tries {
+    width: 100%;
+  }
+
+  #containerGame {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #ingredients {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .ingredient p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .ingredient div {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ingredient img {
+    width: 60%;
+  }
+
+  .try {
+    font-size: 1.2rem;
+  }
+
+  footer h2 {
+    display: none;
+  }
+
+  #winnerAlert,
+  #looserAlert {
+    left: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  #winnerAlert h3,
+  #looserAlert h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 50%;
+  }
+
+  #answer {
+    padding: 0;
+  }
+
+  #looserAlert p {
+    font-size: 0.7rem;
+  }
+
+  #looserAlert .btn {
+    margin: 10px;
+    padding: 0;
+    width: 40%;
+    font-size: 0.8rem;
+  }
+}
+
+/* big phones / small tablet */
+/* from 415px to 767px */
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  #poudlard {
+    display: none;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #potionMaster {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #empty {
+    width: 0;
+  }
+
+  #tip {
+    width: 80%;
+  }
+
+  .ligthning :first-child {
+    width: 70%;
+  }
+
+  .ligthning p {
+    font-size: 0.5rem;
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  #tries {
+    width: 100%;
+  }
+
+  #containerGame {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #ingredients {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .ingredient p {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  .ingredient div {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ingredient img {
+    width: 60%;
+  }
+
+  .try {
+    font-size: 1.2rem;
+  }
+
+  footer h2 {
+    display: none;
+  }
+
+  #winnerAlert,
+  #looserAlert {
+    left: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  #winnerAlert h3,
+  #looserAlert h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 50%;
+  }
+
+  #answer {
+    padding: 0;
+  }
+
+  #looserAlert p {
+    font-size: 0.7rem;
+  }
+
+  #looserAlert .btn {
+    margin: 10px;
+    padding: 0;
+    width: 40%;
+    font-size: 0.8rem;
+  }
+}
+
+/* tablets */
+/* from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tip {
+    width: 50%;
+  }
+
+  #empty {
+    width: 0;
+  }
+
+  h1 {
+    width: 40%;
+  }
+
+  .ligthning :first-child {
+    width: 60%;
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  #tries {
+    width: 100%;
+  }
+
+  #containerGame {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #ingredients {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  .ingredient p {
+    font-size: 3rem;
+    width: 80%;
+  }
+  .ingredient div {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ingredient img {
+    width: 60%;
+  }
+
+  .try {
+    font-size: 1.8rem;
+  }
+
+  footer h2 {
+    display: none;
+  }
+
+  #winnerAlert,
+  #looserAlert {
+    left: 5%;
+    width: 90%;
+    border: 20px ridge #cdad2b;
+  }
+
+  #winnerAlert h3,
+  #looserAlert h3 {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    width: 50%;
+  }
+
+  #answer {
+    padding: 0;
+  }
+
+  #looserAlert p {
+    font-size: 1rem;
+  }
+
+  #looserAlert .btn {
+    margin: 10px 40px;
+    padding: 0;
+    width: 40%;
+    font-size: 1.2rem;
+  }
+}
+
+/* small to medium desktop */
+/* from 1024ox to 1440px */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  #empty {
+    width: 0;
+  }
+
+  h1 {
+    width: 60%;
+  }
+}
+
+/* Medium to big desktop
+/* above 1440px */
+@media screen and (min-width: 1441px) {
+  #winnerAlert,
+  #looserAlert {
+    left: 5%;
+    width: 90%;
+    border: 20px ridge #cdad2b;
+  }
+
+  #winnerAlert h3,
+  #looserAlert h3 {
+    font-size: 3rem;
+  }
+
+  .btn {
+    width: 50%;
+  }
+
+  #answer {
+    padding: 0;
+  }
+
+  #looserAlert p {
+    font-size: 1rem;
+  }
+
+  #looserAlert .btn {
+    margin: 10px 120px;
+    padding: 0;
+    width: 30%;
+    font-size: 1.2rem;
+  }
 }

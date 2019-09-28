@@ -24,7 +24,7 @@ body {
   position: relative;
   background-color: #24282c;
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   background-image: url("../images/homepage.jpg");
   background-size: overlay;
   background-repeat: repeat;
@@ -104,7 +104,7 @@ p {
   justify-content: space-around;
   align-items: center;
   padding: 0 20px;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 #logo {
@@ -620,4 +620,152 @@ p {
 
 #equality img {
   width: 90%;
+}
+
+/* media queries for responsive*/
+
+/* phones, under 413px */
+@media screen and (max-width: 413px) {
+  #intro {
+    width: 100vw;
+  }
+
+  #random {
+    width: 100vw;
+  }
+
+  #intro h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #explanation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 10px ridge #cdad2b;
+  }
+
+  #explanation p {
+    width: 100%;
+  }
+
+  #rules {
+    width: 100%;
+    padding: 0;
+  }
+  #help {
+    position: static;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .ligthning {
+    width: 100%;
+  }
+  .ligthning img {
+    width: 30%;
+  }
+
+  .btn {
+    width: 50%;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 10px;
+  }
+}
+
+/* big phones / small tablet */
+/* from 415px to 767px */
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  #intro {
+    width: 100vw;
+  }
+  #intro h1 {
+    font-size: 5rem;
+  }
+
+  #explanation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 10px ridge #cdad2b;
+  }
+
+  #rules {
+    width: 100%;
+    padding: 0;
+  }
+  #help {
+    position: static;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 10px;
+  }
+
+  .ligthning {
+    width: 100%;
+  }
+  .ligthning img {
+    width: 30%;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 50%;
+    margin: 0 10px;
+    font-size: 1.1rem;
+  }
+}
+
+/* tablets */
+/* from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #intro {
+    width: 100vw;
+  }
+  #intro h1 {
+    font-size: 5rem;
+  }
+
+  #explanation {
+    border: 10px ridge #cdad2b;
+  }
+
+  #help {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .ligthning img {
+    width: 50%;
+  }
+
+  .btn {
+    width: 50%;
+    margin: 0 10px;
+    font-size: 1.8rem;
+  }
+}
+
+/* small to medium desktop */
+/* from 1024ox to 1440px */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+}
+
+/* Medium to big desktop
+/* above 1440px */
+@media screen and (min-width: 1441px) {
 }

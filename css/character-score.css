@@ -520,3 +520,319 @@ h3 {
 #equality img {
   width: 90%;
 }
+
+/* media queries for responsive*/
+
+/* phones, under 413px */
+@media screen and (max-width: 413px) {
+  h1 {
+    font-size: 2rem;
+    width: 90%;
+  }
+
+  #random {
+    width: 100vw;
+  }
+
+  .characterRandom {
+    border: 10px ridge #cdad2b;
+  }
+
+  #random .btn {
+    width: 70%;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .characterSort {
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  .characterSort img {
+    width: 90%;
+  }
+
+  #btnCharacterSort {
+    width: 80%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  #houseCupBackground h1 {
+    font-size: 3rem;
+  }
+
+  #score {
+    border: 10px ridge #cdad2b;
+  }
+
+  #score h2,
+  #score p {
+    font-size: 1rem;
+    width: 30%;
+  }
+
+  #score .btn {
+    width: 30%;
+    margin: 15px;
+    font-size: 1rem;
+  }
+
+  #equality,
+  .winnerHouse {
+    left: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  #equality .btn,
+  .winnerHouse .btn {
+    margin: 0 20px;
+    padding: 0;
+    width: 30%;
+    font-size: 0.8rem;
+  }
+
+  .winnerHouse img {
+    width: 90%;
+  }
+
+  .winnerHouse h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+/* big phones / small tablet */
+/* from 415px to 767px */
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+    width: 90%;
+  }
+
+  #random {
+    width: 100vw;
+  }
+
+  .characterRandom {
+    border: 10px ridge #cdad2b;
+  }
+
+  #random .btn {
+    width: 70%;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .characterSort {
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  .characterSort img {
+    width: 90%;
+  }
+
+  #btnCharacterSort {
+    width: 80%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  #houseCupBackground h1 {
+    font-size: 3rem;
+  }
+
+  #score {
+    border: 10px ridge #cdad2b;
+  }
+
+  #score h2,
+  #score p {
+    font-size: 1rem;
+    width: 30%;
+  }
+
+  #score .btn {
+    width: 30%;
+    margin: 15px;
+    font-size: 1rem;
+  }
+
+  #equality,
+  .winnerHouse {
+    left: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  #equality .btn,
+  .winnerHouse .btn {
+    margin: 0 20px;
+    padding: 0;
+    width: 30%;
+    font-size: 0.8rem;
+  }
+
+  .winnerHouse img {
+    width: 90%;
+  }
+
+  .winnerHouse h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+/* tablets */
+/* from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 3rem;
+    width: 90%;
+  }
+
+  #random {
+    width: 100vw;
+  }
+
+  .characterRandom {
+    border: 10px ridge #cdad2b;
+    width: 50%;
+  }
+
+  #random .btn {
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  .characterSort {
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  .characterSort img {
+    width: 90%;
+  }
+
+  #btnCharacterSort {
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.8rem;
+  }
+
+  #houseCupBackground h1 {
+    font-size: 5rem;
+  }
+
+  #score h2,
+  #score p {
+    font-size: 2rem;
+    width: 30%;
+  }
+
+  #equality,
+  .winnerHouse {
+    left: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  #equality .btn,
+  .winnerHouse .btn {
+    margin: 0 40px;
+    padding: 0;
+    width: 40%;
+    font-size: 0.8rem;
+  }
+
+  .winnerHouse img {
+    width: 90%;
+  }
+
+  .winnerHouse h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* small to medium desktop */
+/* from 1024ox to 1440px */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .winnerHouse h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* Medium to big desktop
+/* above 1440px */
+@media screen and (min-width: 1441px) {
+  h3 {
+    font-size: 4rem;
+  }
+
+  .characterSort {
+    left: 5%;
+    right: 5%;
+    width: 90%;
+  }
+
+  .characterSort img {
+    width: 90%;
+  }
+
+  #btnCharacterSort {
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.8rem;
+  }
+
+  #equality,
+  .winnerHouse {
+    left: 5%;
+    width: 90%;
+    border: 10px ridge #cdad2b;
+  }
+
+  #equality .btn,
+  .winnerHouse .btn {
+    margin: 0 120px;
+    padding: 10px;
+    width: 40%;
+    font-size: 1.5rem;
+  }
+
+  .winnerHouse img {
+    width: 90%;
+  }
+
+  .winnerHouse h3 {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
