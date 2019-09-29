@@ -135,11 +135,3 @@ leech.onclick = addIngredientOnclick;
 skin.onclick = addIngredientOnclick;
 philter.onclick = addIngredientOnclick;
 grass.onclick = addIngredientOnclick;
-
-//ontouch
-horn.ontouchstart = addIngredientOnclick;
-flie.ontouchstart = addIngredientOnclick;
-leech.ontouchstart = addIngredientOnclick;
-skin.ontouchstart = addIngredientOnclick;
-philter.ontouchstart = addIngredientOnclick;
-grass.ontouchstart = addIngredientOnclick;
